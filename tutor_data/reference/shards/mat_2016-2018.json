@@ -1,0 +1,823 @@
+{
+ "unit": "mat_2016-2018",
+ "generated": "2026-08-06",
+ "new_tags": [],
+ "questions": [
+  {
+   "id": "MAT2016A",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "A",
+   "topic": [
+    "sequences_and_series"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "arithmetic_series_sum"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016B",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "B",
+   "topic": [
+    "geometry"
+   ],
+   "technique": [
+    "pythagoras_or_trig_in_triangle",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "extraneous_root_not_rejected"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016C",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "C",
+   "topic": [
+    "coordinate_geometry",
+    "algebra"
+   ],
+   "technique": [
+    "completing_the_square",
+    "circle_equation_manipulation",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016D",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "D",
+   "topic": [
+    "trigonometry"
+   ],
+   "technique": [
+    "case_split",
+    "trig_identity_application",
+    "parity_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "case_analysis",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016E",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "E",
+   "topic": [
+    "graph_sketching",
+    "trigonometry"
+   ],
+   "technique": [
+    "sketching_to_count_intersections",
+    "graph_transformation"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016F",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "F",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "factor_or_remainder_theorem",
+    "substitution",
+    "parity_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016G",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "G",
+   "topic": [
+    "sequences_and_series"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "geometric_series_sum"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016H",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "H",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "bounds_of_integration_wrong",
+    "sign_error"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016I",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "I",
+   "topic": [
+    "algebra",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "vector_or_coordinate_argument",
+    "circle_equation_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2016J",
+   "paper": "MAT",
+   "year": 2016,
+   "part": "J",
+   "topic": [
+    "number_theory"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "case_split"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "case_analysis",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017A",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "A",
+   "topic": [
+    "algebra",
+    "calculus"
+   ],
+   "technique": [
+    "discriminant_condition",
+    "stationary_point_analysis"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017B",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "B",
+   "topic": [
+    "trigonometry",
+    "algebra"
+   ],
+   "technique": [
+    "substitution",
+    "completing_the_square"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017C",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "C",
+   "topic": [
+    "sequences_and_series",
+    "number_theory"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "modular_arithmetic"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017D",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "D",
+   "topic": [
+    "graph_sketching",
+    "functions"
+   ],
+   "technique": [
+    "graph_transformation"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017E",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "E",
+   "topic": [
+    "algebra",
+    "calculus"
+   ],
+   "technique": [
+    "optimisation_via_calculus",
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017F",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "F",
+   "topic": [
+    "trigonometry"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "inequality_manipulation",
+    "case_split"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "logical_precision",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "sign_error",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017G",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "G",
+   "topic": [
+    "geometry",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "symmetry_argument",
+    "circle_equation_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "symmetry_wrongly_assumed"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017H",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "H",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "factor_or_remainder_theorem",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "extraneous_root_not_rejected"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017I",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "I",
+   "topic": [
+    "logarithms",
+    "algebra"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "discriminant_condition",
+    "factor_or_remainder_theorem"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "sign_error"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2017J",
+   "paper": "MAT",
+   "year": 2017,
+   "part": "J",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "bounding_or_extreme_value_argument",
+    "definite_integral_evaluation",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "estimation_and_sanity_check",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "sign_error",
+    "bounds_of_integration_wrong"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018A",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "A",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "area_between_curves",
+    "definite_integral_evaluation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "bounds_of_integration_wrong",
+    "boundary_term_dropped"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018B",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "B",
+   "topic": [
+    "calculus",
+    "algebra"
+   ],
+   "technique": [
+    "substitution",
+    "polynomial_root_relations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018C",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "C",
+   "topic": [
+    "algebra",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "simultaneous_equations",
+    "inequality_manipulation",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "division_by_zero_or_unsigned_variable"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018D",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "D",
+   "topic": [
+    "algebra",
+    "graph_sketching"
+   ],
+   "technique": [
+    "completing_the_square",
+    "graph_transformation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018E",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "E",
+   "topic": [
+    "geometry",
+    "number_theory"
+   ],
+   "technique": [
+    "counting_by_cases",
+    "bounding_or_extreme_value_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "careful_reading_of_constraints",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018F",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "F",
+   "topic": [
+    "coordinate_geometry",
+    "algebra"
+   ],
+   "technique": [
+    "optimisation_via_calculus",
+    "vector_or_coordinate_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018G",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "G",
+   "topic": [
+    "calculus",
+    "algebra"
+   ],
+   "technique": [
+    "simultaneous_equations",
+    "tangent_or_normal_line",
+    "stationary_point_analysis"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "sign_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018H",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "H",
+   "topic": [
+    "geometry",
+    "algebra"
+   ],
+   "technique": [
+    "substitution",
+    "optimisation_via_AM-GM_or_inequality"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "abstraction_from_specific_to_general",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018I",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "I",
+   "topic": [
+    "algebra",
+    "graph_sketching"
+   ],
+   "technique": [
+    "binomial_expansion",
+    "graph_transformation",
+    "case_split"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "sign_error"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2018J",
+   "paper": "MAT",
+   "year": 2018,
+   "part": "J",
+   "topic": [
+    "algebra",
+    "functions"
+   ],
+   "technique": [
+    "symmetry_argument",
+    "case_split"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "logical_precision",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "symmetry_wrongly_assumed",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

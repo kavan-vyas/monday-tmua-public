@@ -1,0 +1,567 @@
+{
+ "unit": "tmua_2020_p1",
+ "generated": "2026-08-06",
+ "new_tags": [
+  {
+   "category": "technique",
+   "tag": "term_by_term_power_rule",
+   "why": "differentiating or integrating a sum of power-of-x terms one term at a time via the power rule; no existing tag covers plain power-rule calculus"
+  }
+ ],
+ "questions": [
+  {
+   "id": "TMUA2020P1Q01",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "1",
+   "topic": [
+    "calculus"
+   ],
+   "technique": [
+    "term_by_term_power_rule"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q02",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "2",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "factor_or_remainder_theorem",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q03",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "3",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "inequality_manipulation",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "case_analysis",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q04",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "4",
+   "topic": [
+    "sequences_and_series"
+   ],
+   "technique": [
+    "geometric_series_sum",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q05",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "5",
+   "topic": [
+    "algebra",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "completing_the_square",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q06",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "6",
+   "topic": [
+    "algebra",
+    "functions"
+   ],
+   "technique": [
+    "substitution",
+    "completing_the_square"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q07",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "7",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "exponential_law_manipulation",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q08",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "8",
+   "topic": [
+    "algebra",
+    "functions"
+   ],
+   "technique": [
+    "completing_the_square",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q09",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "9",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "polynomial_root_relations",
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q10",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "10",
+   "topic": [
+    "graph_sketching",
+    "functions"
+   ],
+   "technique": [
+    "graph_transformation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q11",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "11",
+   "topic": [
+    "calculus",
+    "integration",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "area_between_curves",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_applications",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q12",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "12",
+   "topic": [
+    "trigonometry",
+    "graph_sketching",
+    "functions"
+   ],
+   "technique": [
+    "sketching_to_count_intersections"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_applications",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q13",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "13",
+   "topic": [
+    "combinatorics",
+    "algebra"
+   ],
+   "technique": [
+    "binomial_expansion",
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q14",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "14",
+   "topic": [
+    "calculus",
+    "integration",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "area_between_curves",
+    "definite_integral_evaluation",
+    "symmetry_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "symmetry_wrongly_assumed"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q15",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "15",
+   "topic": [
+    "logarithms",
+    "algebra"
+   ],
+   "technique": [
+    "substitution",
+    "log_law_manipulation",
+    "factor_or_remainder_theorem"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "sign_error"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q16",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "16",
+   "topic": [
+    "geometry",
+    "coordinate_geometry",
+    "trigonometry"
+   ],
+   "technique": [
+    "circle_equation_manipulation",
+    "pythagoras_or_trig_in_triangle"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_applications",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q17",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "17",
+   "topic": [
+    "algebra",
+    "functions",
+    "graph_sketching"
+   ],
+   "technique": [
+    "substitution",
+    "discriminant_condition",
+    "case_split"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "logical_precision",
+    "case_analysis",
+    "working_backwards_from_options"
+   ],
+   "trap_type": [
+    "division_by_zero_or_unsigned_variable",
+    "missed_case"
+   ],
+   "difficulty": 5,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q18",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "18",
+   "topic": [
+    "trigonometry",
+    "algebra"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "case_split",
+    "factor_or_remainder_theorem"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "case_analysis",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "extraneous_root_not_rejected",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q19",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "19",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "completing_the_square",
+    "substitution_of_test_values"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "numerical_fluency",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P1Q20",
+   "paper": "TMUA_P1",
+   "year": 2020,
+   "part": "20",
+   "topic": [
+    "algebra",
+    "functions"
+   ],
+   "technique": [
+    "discriminant_condition",
+    "case_split",
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "case_analysis",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

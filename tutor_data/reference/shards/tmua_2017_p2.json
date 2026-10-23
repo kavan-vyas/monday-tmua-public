@@ -1,0 +1,609 @@
+{
+ "unit": "tmua_2017_p2",
+ "generated": "2026-08-06",
+ "new_tags": [
+  {
+   "category": "technique",
+   "tag": "power_rule_differentiation",
+   "why": "Differentiating a function after rewriting it in negative/fractional index form; no existing technique tag covers plain explicit differentiation via the power rule."
+  },
+  {
+   "category": "technique",
+   "tag": "surd_rationalisation",
+   "why": "Rationalising a denominator containing surds/cube roots to simplify an expression; distinct from log/exponential manipulation tags already present."
+  },
+  {
+   "category": "trap_type",
+   "tag": "inequality_direction_reversal_ignored",
+   "why": "Failing to flip an inequality when applying a decreasing function (e.g. a log with base <1) or multiplying/dividing by a negative; distinct from the existing strict/non-strict confusion tag."
+  }
+ ],
+ "questions": [
+  {
+   "id": "TMUA2017P2Q01",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "1",
+   "topic": [
+    "calculus",
+    "algebra"
+   ],
+   "technique": [
+    "power_rule_differentiation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q02",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "2",
+   "topic": [
+    "coordinate_geometry",
+    "geometry"
+   ],
+   "technique": [
+    "vector_or_coordinate_argument",
+    "pythagoras_or_trig_in_triangle"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "premature_termination_before_final_step"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q03",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "3",
+   "topic": [
+    "sequences_and_series",
+    "algebra"
+   ],
+   "technique": [
+    "geometric_series_sum",
+    "surd_rationalisation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "numerical_fluency",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q04",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "4",
+   "topic": [
+    "trigonometry",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "case_split"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "careful_reading_of_constraints",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q05",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "5",
+   "topic": [
+    "logic_and_proof",
+    "number_theory"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "quantifier_negation",
+    "divisibility_argument"
+   ],
+   "question_type": "disprove_or_counterexample",
+   "cognitive_skill": [
+    "logical_precision",
+    "careful_reading_of_constraints",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "misread_question",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q06",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "6",
+   "topic": [
+    "calculus",
+    "integration",
+    "sequences_and_series"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "recurrence_unrolling",
+    "proof_by_induction"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q07",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "7",
+   "topic": [
+    "functions",
+    "graph_sketching",
+    "algebra"
+   ],
+   "technique": [
+    "exponential_law_manipulation",
+    "graph_transformation"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "logical_precision",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q08",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "8",
+   "topic": [
+    "algebra",
+    "logarithms",
+    "trigonometry"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "binomial_expansion",
+    "bounding_or_extreme_value_argument"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "estimation_and_sanity_check",
+    "numerical_fluency",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q09",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "9",
+   "topic": [
+    "logic_and_proof",
+    "number_theory",
+    "algebra"
+   ],
+   "technique": [
+    "factor_or_remainder_theorem",
+    "case_split",
+    "divisibility_argument"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "multi_step_chaining",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q10",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "10",
+   "topic": [
+    "calculus",
+    "integration",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "symmetry_argument",
+    "counterexample_construction"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "logical_precision",
+    "spatial_visualisation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "necessary_confused_with_sufficient",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q11",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "11",
+   "topic": [
+    "calculus",
+    "integration",
+    "algebra"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "graph_transformation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q12",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "12",
+   "topic": [
+    "trigonometry",
+    "graph_sketching"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "case_split"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "case_analysis",
+    "logical_precision",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q13",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "13",
+   "topic": [
+    "algebra",
+    "number_theory"
+   ],
+   "technique": [
+    "inequality_manipulation",
+    "case_split"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "careful_reading_of_constraints",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "units_or_scale_error",
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q14",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "14",
+   "topic": [
+    "algebra",
+    "graph_sketching",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "completing_the_square",
+    "graph_transformation",
+    "stationary_point_analysis"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q15",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "15",
+   "topic": [
+    "sequences_and_series",
+    "number_theory"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "modular_arithmetic",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "multi_step_chaining",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q16",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "16",
+   "topic": [
+    "calculus",
+    "number_theory",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "divisibility_argument",
+    "power_rule_differentiation"
+   ],
+   "question_type": "disprove_or_counterexample",
+   "cognitive_skill": [
+    "case_analysis",
+    "algebraic_manipulation",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q17",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "17",
+   "topic": [
+    "logic_and_proof",
+    "number_theory"
+   ],
+   "technique": [
+    "quantifier_negation",
+    "divisibility_argument"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "symbolic_bookkeeping",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "quantifier_order_confused"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q18",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "18",
+   "topic": [
+    "logic_and_proof",
+    "logarithms"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "inequality_manipulation",
+    "substitution_of_test_values"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "careful_reading_of_constraints",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "inequality_direction_reversal_ignored"
+   ],
+   "difficulty": 5,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q19",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "19",
+   "topic": [
+    "algebra",
+    "calculus",
+    "graph_sketching"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "case_split",
+    "inequality_manipulation"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "logical_precision",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "strict_vs_non_strict_inequality_confusion",
+    "necessary_confused_with_sufficient"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2017P2Q20",
+   "paper": "TMUA_P2",
+   "year": 2017,
+   "part": "20",
+   "topic": [
+    "logic_and_proof",
+    "combinatorics"
+   ],
+   "technique": [
+    "case_split",
+    "truth_table_or_exhaustive_check"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "multi_step_chaining",
+    "logical_precision",
+    "abstraction_from_specific_to_general",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 5,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

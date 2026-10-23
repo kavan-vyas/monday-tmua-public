@@ -1,0 +1,40 @@
+/* The analysis page after a sitting — house tokens only (tokens.css via app.css). */
+.rp-page { padding: 40px max(24px, calc((100% - 932px) / 2)) 80px; font-family: var(--font-sans); color: var(--ink); background: var(--bg); height: 100vh; overflow-y: auto; box-sizing: border-box; }
+.rp-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px; }
+.rp-top h1 { font-size: var(--t-2xl); margin: 4px 0 0; font-weight: var(--fw-semi); }
+.rp-eyebrow { font-family: var(--font-mono); font-size: var(--t-2xs); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
+.rp-actions { display: flex; gap: 8px; }
+.rp-btn { border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink); padding: 8px 14px; border-radius: 8px; text-decoration: none; font-size: var(--t-sm); }
+.rp-btn.primary { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.rp-total { display: flex; align-items: baseline; gap: 8px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); margin-bottom: 16px; font-size: var(--t-md); }
+.rp-total b { font-size: var(--t-2xl); }
+.rp-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; margin-bottom: 18px; box-shadow: var(--shadow-1); }
+.rp-card-head { display: flex; justify-content: space-between; gap: 16px; }
+.rp-card-head h2 { margin: 2px 0 4px; font-size: var(--t-xl); font-weight: var(--fw-semi); }
+.rp-sub { color: var(--ink-2); font-size: var(--t-sm); }
+.rp-score { text-align: right; }
+.rp-score b { font-size: var(--t-3xl); font-weight: var(--fw-bold); }
+.rp-score span { color: var(--ink-3); font-size: var(--t-lg); }
+.rp-grade { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--c-blue-ink); margin-top: 2px; }
+.rp-unmarked { font-size: var(--t-sm) !important; }
+.rp-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0 8px; }
+.rp-facts div { background: var(--sunken); border-radius: 8px; padding: 8px 10px; }
+.rp-facts dt { font-size: var(--t-2xs); color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
+.rp-facts dd { margin: 2px 0 0; font-size: var(--t-md); font-weight: var(--fw-semi); }
+.rp-section-title { margin: 18px 0 8px; font-weight: var(--fw-semi); font-size: var(--t-base); }
+.rp-muted { color: var(--ink-3); font-weight: var(--fw-normal); }
+.rp-bars { width: 100%; height: auto; }
+.rp-bar.right { fill: var(--c-green); }
+.rp-bar.wrong { fill: var(--c-red); }
+.rp-bar.unmarked { fill: var(--c-slate); }
+.rp-budget { stroke: var(--ink-3); stroke-dasharray: 4 4; }
+.rp-barlabel { font-size: 9px; fill: var(--ink-3); font-family: var(--font-mono); }
+.rp-notes { margin: 0; padding-left: 18px; font-size: var(--t-sm); line-height: var(--lh-prose); }
+.rp-table { width: 100%; border-collapse: collapse; font-size: var(--t-sm); }
+.rp-table th { text-align: left; font-weight: var(--fw-medium); color: var(--ink-3); font-size: var(--t-2xs); text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid var(--line); padding: 6px 6px; }
+.rp-table td { border-bottom: 1px solid var(--line); padding: 7px 6px; vertical-align: top; }
+.rp-table tr.wrong td:first-child { box-shadow: inset 3px 0 0 var(--c-red); }
+.rp-table tr.right td:first-child { box-shadow: inset 3px 0 0 var(--c-green); }
+.rp-stem { max-width: 460px; color: var(--ink-2); }
+.rp-error { color: var(--c-red-ink); background: var(--c-red-soft); padding: 10px 12px; border-radius: 8px; margin-bottom: 12px; }
+.rp-foot { margin-top: 20px; font-size: var(--t-sm); }

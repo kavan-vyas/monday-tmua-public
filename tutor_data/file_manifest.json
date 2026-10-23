@@ -1,0 +1,560 @@
+{
+  "generated": null,
+  "base_dir": "major exams",
+  "mat": {
+    "2007": {
+      "paper": "major exams/mat/new/2001-2010/2007/MAT 2007.pdf",
+      "solutions": "major exams/mat/new/2001-2010/2007/Solutions 2007.pdf",
+      "solutions_handwritten": "major exams/mat/new/2001-2010/2007/Solutions 2007 (Handwritten).pdf",
+      "report": null,
+      "full_solutions_available": true
+    },
+    "2008": {
+      "paper": "major exams/mat/new/2001-2010/2008/MAT 2008.pdf",
+      "solutions": "major exams/mat/new/2001-2010/2008/Solutions 2008.pdf",
+      "solutions_handwritten": "major exams/mat/new/2001-2010/2008/Solutions 2008 (Handwritten).pdf",
+      "report": null,
+      "full_solutions_available": true
+    },
+    "2009": {
+      "paper": "major exams/mat/new/2001-2010/2009/MAT 2009.pdf",
+      "solutions": "major exams/mat/new/2001-2010/2009/Solutions 2009.pdf",
+      "solutions_handwritten": "major exams/mat/new/2001-2010/2009/Solutions 2009 (Handwritten).pdf",
+      "report": null,
+      "full_solutions_available": true
+    },
+    "2010": {
+      "paper": "major exams/mat/new/2001-2010/2010/MAT 2010.pdf",
+      "solutions": "major exams/mat/new/2001-2010/2010/Solutions 2010.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2001-2010/2010/MAT 2010 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2011": {
+      "paper": "major exams/mat/new/2011-2020/2011/MAT 2011.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2011/Solutions 2011.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2011-2020/2011/MAT 2011 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2012": {
+      "paper": "major exams/mat/new/2011-2020/2012/MAT 2012.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2012/Solutions 2012.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2011-2020/2012/MAT 2012 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2013": {
+      "paper": "major exams/mat/new/2011-2020/2013/MAT 2013.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2013/Solutions 2013.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2011-2020/2013/MAT 2013 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2014": {
+      "paper": "major exams/mat/new/2011-2020/2014/MAT 2014.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2014/Solutions 2014.pdf",
+      "solutions_handwritten": "major exams/mat/new/2011-2020/2014/Solutions 2014 (Handwritten).pdf",
+      "report": "major exams/mat/new/2011-2020/2014/MAT 2014 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2015": {
+      "paper": "major exams/mat/new/2011-2020/2015/MAT 2015.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2015/Solutions 2015.pdf",
+      "solutions_handwritten": "major exams/mat/new/2011-2020/2015/Solutions 2015 (Handwritten).pdf",
+      "report": "major exams/mat/new/2011-2020/2015/MAT 2015 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2016": {
+      "paper": "major exams/mat/new/2011-2020/2016/MAT 2016.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2016/Solutions 2016.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2011-2020/2016/MAT 2016 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2017": {
+      "paper": "major exams/mat/new/2011-2020/2017/MAT 2017.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2017/Solutions 2017.pdf",
+      "solutions_handwritten": "major exams/mat/new/2011-2020/2017/Solutions 2017 (Handwritten).pdf",
+      "report": "major exams/mat/new/2011-2020/2017/MAT 2017 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2018": {
+      "paper": "major exams/mat/new/2011-2020/2018/MAT 2018.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2018/Solutions 2018.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2011-2020/2018/MAT 2018 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2019": {
+      "paper": "major exams/mat/new/2011-2020/2019/MAT 2019.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2019/Solutions 2019.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2011-2020/2019/MAT 2019 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2020": {
+      "paper": "major exams/mat/new/2011-2020/2020/MAT 2020.pdf",
+      "solutions": "major exams/mat/new/2011-2020/2020/Solutions 2020.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2011-2020/2020/MAT 2020 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2021": {
+      "paper": "major exams/mat/new/2021-2030/2021/MAT 2021.pdf",
+      "solutions": "major exams/mat/new/2021-2030/2021/Solutions 2021.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2021-2030/2021/MAT 2021 Report.pdf",
+      "full_solutions_available": true
+    },
+    "2022": {
+      "paper": "major exams/mat/new/2021-2030/2022/MAT 2022.pdf",
+      "solutions": "major exams/mat/new/2021-2030/2022/Solutions 2022.pdf",
+      "solutions_handwritten": null,
+      "report": "major exams/mat/new/2021-2030/2022/MAT 2022 Report.pdf",
+      "full_solutions_available": true
+    }
+  },
+  "mat_specimen": {
+    "specimen_1": {
+      "paper": "major exams/mat/specimen/MAT Specimen 1.pdf",
+      "solutions": "major exams/mat/specimen/Solutions Specimen 1.pdf",
+      "solutions_handwritten": "major exams/mat/specimen/Solutions Specimen 1 (Handwritten).pdf",
+      "full_solutions_available": true
+    },
+    "specimen_2": {
+      "paper": "major exams/mat/specimen/MAT Specimen 2.pdf",
+      "solutions": "major exams/mat/specimen/Solutions Specimen 2.pdf",
+      "solutions_handwritten": null,
+      "full_solutions_available": true
+    }
+  },
+  "mat_misc": {
+    "specification_2018": "major exams/mat/misc/MAT specification 2018.pdf"
+  },
+  "tmua": {
+    "2016": {
+      "p1": "major exams/tmua/2016/TMUA 2016 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2016/TMUA 2016 Paper 1 Solutions.pdf",
+      "p1_solutions_handwritten": null,
+      "p1_answer_sheet": null,
+      "p2": "major exams/tmua/2016/TMUA 2016 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2016/TMUA 2016 Paper 2 Solutions.pdf",
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": null,
+      "answer_key": null,
+      "full_solutions_available": true
+    },
+    "2017": {
+      "p1": "major exams/tmua/2017/TMUA 2017 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2017/TMUA 2017 Paper 1 Solutions.pdf",
+      "p1_solutions_handwritten": "major exams/tmua/2017/TMUA 2017 Paper 1 Solutions (Handwritten).pdf",
+      "p1_answer_sheet": "major exams/tmua/2017/TMUA 2017 Paper 1 Answer Sheet.pdf",
+      "p2": "major exams/tmua/2017/TMUA 2017 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2017/TMUA 2017 Paper 2 Solutions.pdf",
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": "major exams/tmua/2017/TMUA 2017 Paper 2 Answer Sheet.pdf",
+      "answer_key": "major exams/tmua/2017/TMUA 2017 Answer Key.pdf",
+      "full_solutions_available": true
+    },
+    "2018": {
+      "p1": "major exams/tmua/2018/TMUA 2018 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2018/TMUA 2018 Paper 1 Solutions.pdf",
+      "p1_solutions_handwritten": "major exams/tmua/2018/TMUA 2018 Paper 1 Solutions (Handwritten).pdf",
+      "p1_answer_sheet": "major exams/tmua/2018/TMUA 2018 Paper 1 Answer Sheet.pdf",
+      "p2": "major exams/tmua/2018/TMUA 2018 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2018/TMUA 2018 Paper 2 Solutions.pdf",
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": "major exams/tmua/2018/TMUA 2018 Paper 2 Answer Sheet.pdf",
+      "answer_key": "major exams/tmua/2018/TMUA 2018 Answer Key.pdf",
+      "full_solutions_available": true
+    },
+    "2019": {
+      "p1": "major exams/tmua/2019/TMUA 2019 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2019/TMUA 2019 Paper 1 Solutions.pdf",
+      "p1_solutions_handwritten": null,
+      "p1_answer_sheet": "major exams/tmua/2019/TMUA 2019 Paper 1 Answer Sheet.pdf",
+      "p2": "major exams/tmua/2019/TMUA 2019 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2019/TMUA 2019 Paper 2 Solutions.pdf",
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": "major exams/tmua/2019/TMUA 2019 Paper 2 Answer Sheet.pdf",
+      "answer_key": "major exams/tmua/2019/TMUA 2019 Answer Key.pdf",
+      "full_solutions_available": true,
+      "combined_solutions_note": "The file named 'TMUA 2019 Solutions.pdf' is byte-identical to the Paper 1 solutions, not a combined document. Entry removed so nothing asks it for Paper 2 answers."
+    },
+    "2020": {
+      "p1": "major exams/tmua/2020/TMUA 2020 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2020/TMUA 2020 Paper 1 Solutions.pdf",
+      "p1_solutions_handwritten": "major exams/tmua/2020/TMUA 2020 Paper 1 Solutions (Handwritten).pdf",
+      "p1_answer_sheet": null,
+      "p2": "major exams/tmua/2020/TMUA 2020 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2020/TMUA 2020 Paper 2 Solutions.pdf",
+      "p2_solutions_handwritten": "major exams/tmua/2020/TMUA 2020 Paper 2 Solutions (Handwritten).pdf",
+      "p2_answer_sheet": null,
+      "answer_key": "major exams/tmua/2020/TMUA 2020 Answer Key.pdf",
+      "full_solutions_available": true
+    },
+    "2021": {
+      "p1": "major exams/tmua/2021/TMUA 2021 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2021/TMUA 2021 Paper 1 Solutions.pdf",
+      "p1_solutions_handwritten": "major exams/tmua/2021/TMUA 2021 Paper 1 Solutions (Handwritten).pdf",
+      "p1_answer_sheet": null,
+      "p2": "major exams/tmua/2021/TMUA 2021 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2021/TMUA 2021 Paper 2 Solutions.pdf",
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": null,
+      "answer_key": "major exams/tmua/2021/TMUA 2021 Answer Key.pdf",
+      "full_solutions_available": true
+    },
+    "2022": {
+      "p1": "major exams/tmua/2022/TMUA 2022 Paper 1.pdf",
+      "p1_solutions": null,
+      "p1_solutions_handwritten": null,
+      "p1_answer_sheet": null,
+      "p2": "major exams/tmua/2022/TMUA 2022 Paper 2.pdf",
+      "p2_solutions": null,
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": null,
+      "answer_key": "major exams/tmua/2022/TMUA 2022 Answer Key.pdf",
+      "full_solutions_available": false
+    },
+    "2023": {
+      "p1": "major exams/tmua/2023/TMUA 2023 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2023/TMUA 2023 Paper 1 Solutions.pdf",
+      "p1_solutions_handwritten": null,
+      "p1_answer_sheet": null,
+      "p2": "major exams/tmua/2023/TMUA 2023 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2023/TMUA 2023 Paper 2 Solutions.pdf",
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": null,
+      "answer_key": null,
+      "full_solutions_available": true,
+      "note": "Official 2023 papers and worked solutions (Version 1.0, September 2023). No separate answer-key PDF: the keys in tutor_data/exams/answers/tmua_2023_p*.json were read off each worked solution's closing line."
+    },
+    "2025": {
+      "p1": "major exams/tmua/2025/TMUA 2025 Paper 1.pdf",
+      "p1_solutions": "major exams/tmua/2025/TMUA 2025 Paper 1 Solutions (AI).pdf",
+      "p1_solutions_handwritten": null,
+      "p1_answer_sheet": null,
+      "p2": "major exams/tmua/2025/TMUA 2025 Paper 2.pdf",
+      "p2_solutions": "major exams/tmua/2025/TMUA 2025 Paper 2 Solutions (AI).pdf",
+      "p2_solutions_handwritten": null,
+      "p2_answer_sheet": null,
+      "answer_key": "major exams/tmua/2025/TMUA 2025 Answer Key (AI).pdf",
+      "full_solutions_available": true,
+      "recalled": true,
+      "solutions_ai_generated": true,
+      "source": "major exams/tmua/2025/source/TMUA 2025 Recalled Combined (V0.51).pdf",
+      "note": "Recalled from the Oct 2025 UK sitting (source V0.51, 31 Dec 2025). 39 questions: P1 = source Q1-20, P2 = source Q21-39 renumbered 1-19. Solutions and key are AI-written, not official; recall notes flag incomplete questions (P1 Q1, Q7, Q11, Q13; P2 Q5, Q8, Q14, Q16)."
+    }
+  },
+  "tmua_practice": {
+    "p1": "major exams/tmua/practice/TMUA Practice Paper 1.pdf",
+    "p1_solutions": "major exams/tmua/practice/TMUA Practice Paper 1 Solutions.pdf",
+    "p1_solutions_handwritten": "major exams/tmua/practice/TMUA Practice Paper 1 Solutions (Handwritten).pdf",
+    "p1_answer_sheet": "major exams/tmua/practice/TMUA Practice Paper 1 Answer Sheet.pdf",
+    "p2": "major exams/tmua/practice/TMUA Practice Paper 2.pdf",
+    "p2_solutions": "major exams/tmua/practice/TMUA Practice Paper 2 Solutions.pdf",
+    "p2_solutions_handwritten": null,
+    "p2_answer_sheet": "major exams/tmua/practice/TMUA Practice Paper 2 Answer Sheet.pdf",
+    "answer_key": "major exams/tmua/practice/TMUA Practice Answer Key.pdf",
+    "full_solutions_available": true
+  },
+  "tmua_specimen": {
+    "p1": "major exams/tmua/specimen/TMUA Specimen Paper 1.pdf",
+    "p1_solutions": "major exams/tmua/specimen/TMUA Specimen Paper 1 Solutions.pdf",
+    "p1_solutions_handwritten": "major exams/tmua/specimen/TMUA Specimen Paper 1 Solutions (Handwritten).pdf",
+    "p2": "major exams/tmua/specimen/TMUA Specimen Paper 2.pdf",
+    "p2_solutions": "major exams/tmua/specimen/TMUA Specimen Paper 2 Solutions.pdf",
+    "p2_solutions_handwritten": null,
+    "answer_key": "major exams/tmua/specimen/TMUA Specimen Answer Key.pdf",
+    "full_solutions_available": true
+  },
+  "tmua_misc": {
+    "specification_2020": "major exams/tmua/misc/TMUA Specification 2020.pdf",
+    "specification_2021": "major exams/tmua/misc/TMUA Specification 2021.pdf",
+    "notes_logic_proof_2020": "major exams/tmua/misc/TMUA Notes on Logic and Proof 2020.pdf",
+    "notes_logic_proof_2021": "major exams/tmua/misc/TMUA Notes on Logic and Proof 2021.pdf"
+  },
+  "gaps": [
+    {
+      "key": "TMUA_2022",
+      "severity": "high",
+      "description": "TMUA 2022 Paper 1 and Paper 2 have no worked solutions \u2014 only an answer key exists. Cannot provide step-by-step solution walkthroughs for this year. Use for timed practice only; answer key available for marking."
+    },
+    {
+      "key": "MAT_2007_2008_2009_reports",
+      "severity": "low",
+      "description": "MAT 2007, 2008, and 2009 have no examiner's report. All three years have full typed and handwritten solutions. Minor gap only."
+    }
+  ],
+  "tmua_mock_units": {
+    "note": "8 usable mock units total: 6 official years (2017-2022) + practice set + specimen set. Plus 4 Tyler mock sets (A-D) under tmua_tyler_mocks, and 4 James Chen customs under tmua_chen_customs.",
+    "full_ms_support": [
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+      "practice",
+      "specimen"
+    ],
+    "answer_key_only": [
+      "2022"
+    ]
+  },
+  "tmua_tyler_mocks": {
+    "note": "Tyler Tutoring (Jacqueline Tyler) mock sets A-D. Unofficial mocks the student will sit. Each set was one combined PDF (P1 pages 1-7, P2 from page 8), split 2026-08-24. Solutions are answer/solution PDFs split the same way. All eight papers ARE in the mock tag index (families TYLER_P1 / TYLER_P2, sets A-D, classified 2026-09-10) but none is transcribed, so the exam simulator cannot serve them and questions must still be read off the pages.",
+    "sets": {
+      "A": {
+        "p1": "major exams/tmua/tyler/set-a/Tyler Set A Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/tyler/set-a/Tyler Set A Paper 1 MS.pdf",
+        "p2": "major exams/tmua/tyler/set-a/Tyler Set A Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/tyler/set-a/Tyler Set A Paper 2 MS.pdf"
+      },
+      "B": {
+        "p1": "major exams/tmua/tyler/set-b/Tyler Set B Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/tyler/set-b/Tyler Set B Paper 1 MS.pdf",
+        "p2": "major exams/tmua/tyler/set-b/Tyler Set B Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/tyler/set-b/Tyler Set B Paper 2 MS.pdf"
+      },
+      "C": {
+        "p1": "major exams/tmua/tyler/set-c/Tyler Set C Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/tyler/set-c/Tyler Set C Paper 1 MS.pdf",
+        "p2": "major exams/tmua/tyler/set-c/Tyler Set C Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/tyler/set-c/Tyler Set C Paper 2 MS.pdf"
+      },
+      "D": {
+        "p1": "major exams/tmua/tyler/set-d/Tyler Set D Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/tyler/set-d/Tyler Set D Paper 1 MS.pdf",
+        "p2": "major exams/tmua/tyler/set-d/Tyler Set D Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/tyler/set-d/Tyler Set D Paper 2 MS.pdf"
+      }
+    }
+  },
+  "tmua_chen_customs": {
+    "note": "James Chen's four custom TMUA papers: two written in 2025 before he sat the test, two more in 2026. 20 MCQs and 75 minutes each. Sittable in the app's exam simulator at /exam as jc_25_p1, jc_25_p2, jc_26_p1, jc_26_p2 (app/server/papers.js is the registry). Chen prints full worked solutions at the BACK OF THE SAME PDF \u2014 there is no separate mark scheme, so paper and solutions are one file. Classified into mock_tag_index.json as families JC_P1/JC_P2; never source questions from memory, always read the pages. Transcribed content lives in tutor_data/exams/questions/jc_<yy>_p<n>.json. Chen describes the 2026 pair as deliberately whimsical, with some questions off the TMUA specification \u2014 those carry off_spec in the index.",
+    "papers": {
+      "2025": {
+        "p1": "major exams/tmua/chen/2025/James Chen TMUA 2025 Paper 1.pdf",
+        "p1_solutions": "major exams/tmua/chen/2025/James Chen TMUA 2025 Paper 1.pdf",
+        "p1_meta": {
+          "paper_id": "jc_25_p1",
+          "pages": 19,
+          "description": "Mixes paper-1 techniques with paper-2 logic and proof rather than separating them. Written while Chen was Year 12 at Reading School."
+        },
+        "p2": "major exams/tmua/chen/2025/James Chen TMUA 2025 Paper 2.pdf",
+        "p2_solutions": "major exams/tmua/chen/2025/James Chen TMUA 2025 Paper 2.pdf",
+        "p2_meta": {
+          "paper_id": "jc_25_p2",
+          "pages": 22,
+          "description": "Mostly paper-2 material: logic, proof, necessary and sufficient conditions. Chen warns many questions are deliberately ridiculous."
+        }
+      },
+      "2026": {
+        "p1": "major exams/tmua/chen/2026/James Chen TMUA 2026 Paper 1.pdf",
+        "p1_solutions": "major exams/tmua/chen/2026/James Chen TMUA 2026 Paper 1.pdf",
+        "p1_meta": {
+          "paper_id": "jc_26_p1",
+          "pages": 34,
+          "description": "Chen's 2026 return, written from Cambridge. Techniques-led, with a running Gaussian-integral joke. Video solutions: https://youtu.be/bWZAR-4nn5U"
+        },
+        "p2": "major exams/tmua/chen/2026/James Chen TMUA 2026 Paper 2.pdf",
+        "p2_solutions": "major exams/tmua/chen/2026/James Chen TMUA 2026 Paper 2.pdf",
+        "p2_meta": {
+          "paper_id": "jc_26_p2",
+          "pages": 37,
+          "description": "Chen's 2026 paper 2: logic and proof, several questions self-referential or off-spec. Video solutions: https://youtu.be/bVUcgQIypdk"
+        }
+      }
+    },
+    "source": "James Chen (Reading School, now reading Mathematics at Cambridge)"
+  },
+  "tmua_heracles_mocks": {
+    "note": "Heracles TMUA mock sets 1-3, two papers each (120 MCQs). Filed under the spelling on the papers' own covers, Heracles; the files arrived named Hercules and every note of the student's uses that spelling, so 'hercules' is kept as a tag/alias and canonical.js resolves both to HER-<set>-P<paper>-Qnn. Separate worked-solutions PDF per paper (filed as MS). Registered in app/server/papers.js as her_s<set>_p<paper>. Answer keys are in tutor_data/exams/answers/ (all 120 read from the solutions PDFs) and all 120 questions are classified into mock_tag_index.json as families HER_P1 / HER_P2. NOT transcribed: read questions off the pages, never from memory.",
+    "tags": [
+      "heracles",
+      "hercules"
+    ],
+    "sets": {
+      "1": {
+        "p1": "major exams/tmua/heracles/set-1/Heracles Set 1 Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/heracles/set-1/Heracles Set 1 Paper 1 MS.pdf",
+        "p2": "major exams/tmua/heracles/set-1/Heracles Set 1 Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/heracles/set-1/Heracles Set 1 Paper 2 MS.pdf"
+      },
+      "2": {
+        "p1": "major exams/tmua/heracles/set-2/Heracles Set 2 Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/heracles/set-2/Heracles Set 2 Paper 1 MS.pdf",
+        "p2": "major exams/tmua/heracles/set-2/Heracles Set 2 Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/heracles/set-2/Heracles Set 2 Paper 2 MS.pdf"
+      },
+      "3": {
+        "p1": "major exams/tmua/heracles/set-3/Heracles Set 3 Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/heracles/set-3/Heracles Set 3 Paper 1 MS.pdf",
+        "p2": "major exams/tmua/heracles/set-3/Heracles Set 3 Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/heracles/set-3/Heracles Set 3 Paper 2 MS.pdf"
+      }
+    }
+  },
+  "library": {
+    "note": "Topic worksheets and non-paper material. Not papers, not indexed, filed by topic.",
+    "items": [
+      {
+        "path": "tutor_data/library/sequences_and_series/TMUA Worksheet - Sequences, Series and Binomial Expansion.pdf",
+        "topic": [
+          "sequences_and_series",
+          "algebra"
+        ],
+        "technique": [
+          "binomial_expansion",
+          "arithmetic_series",
+          "geometric_series"
+        ],
+        "pages": 4,
+        "kind": "topic worksheet",
+        "description": "Titled \"TMUA Practice - Sequences and Binomial\". MCQ worksheet: arithmetic series nth term, sum to infinity of a geometric series, binomial expansion.",
+        "was_misfiled_as": "TMUA Practice Paper 2 (dropped 2026-08-20).pdf"
+      }
+    ]
+  },
+  "tmua_rosie": {
+    "note": "Rosie's Papers, Set alpha Paper 1. 20 MCQs, unofficial. No mark scheme exists for it, so its questions are tagged verification_status unverified_no_mark_scheme in mock_tag_index.json.",
+    "sets": {
+      "alpha": {
+        "p1": "major exams/tmua/rosie/set-alpha/Rosie Set alpha Paper 1 QP.pdf"
+      }
+    },
+    "source": "Rosie's Papers"
+  },
+  "tmua_asher_falcon": {
+    "note": "Asher Falcon mock, Paper 1. 20 MCQs, unofficial, no mark scheme.",
+    "sets": {
+      "1": {
+        "p1": "major exams/tmua/asher-falcon/set-1/Asher Falcon Paper 1 QP.pdf"
+      }
+    },
+    "source": "Asher Falcon"
+  },
+  "tmua_zach": {
+    "note": "Zach's full mock, 22pp, 75 minutes. Unofficial, no mark scheme, not classified.",
+    "sets": {
+      "1": {
+        "p1": "major exams/tmua/zach/set-1/Zach Paper 1 QP.pdf"
+      }
+    },
+    "source": "Zach"
+  },
+  "tmua_euclid": {
+    "note": "TMUA Euclid mock sets 1-4, two papers each, plus a one-off \"R2Drew edition\" Paper 1 \u2014 180 MCQs in all. Registered in app/server/papers.js as euc_s<set>_p<paper> and euc_r2drew_p1, and sittable in the /exam simulator. Each numbered set ships a full worked mark scheme that prints \"Answer: option X.\" at the end of every solution, so all 160 answers are read directly (tutor_data/exams/answers/). Classified into mock_tag_index.json as families EUC_P1 / EUC_P2. NOT transcribed: read questions off the pages, never from memory. Two quirks of the R2Drew edition: it has NO mark scheme at all, and it has SIX options per question (A-F) whose labels are drawn with a broken font subset, so they print as R 2 D r E W \u2014 read them as A B C D E F in that order.",
+    "sets": {
+      "1": {
+        "p1": "major exams/tmua/euclid/set-1/Euclid Set 1 Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/euclid/set-1/Euclid Set 1 Paper 1 MS.pdf",
+        "p2": "major exams/tmua/euclid/set-1/Euclid Set 1 Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/euclid/set-1/Euclid Set 1 Paper 2 MS.pdf"
+      },
+      "2": {
+        "p1": "major exams/tmua/euclid/set-2/Euclid Set 2 Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/euclid/set-2/Euclid Set 2 Paper 1 MS.pdf",
+        "p2": "major exams/tmua/euclid/set-2/Euclid Set 2 Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/euclid/set-2/Euclid Set 2 Paper 2 MS.pdf"
+      },
+      "3": {
+        "p1": "major exams/tmua/euclid/set-3/Euclid Set 3 Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/euclid/set-3/Euclid Set 3 Paper 1 MS.pdf",
+        "p2": "major exams/tmua/euclid/set-3/Euclid Set 3 Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/euclid/set-3/Euclid Set 3 Paper 2 MS.pdf"
+      },
+      "4": {
+        "p1": "major exams/tmua/euclid/set-4/Euclid Set 4 Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/euclid/set-4/Euclid Set 4 Paper 1 MS.pdf",
+        "p2": "major exams/tmua/euclid/set-4/Euclid Set 4 Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/euclid/set-4/Euclid Set 4 Paper 2 MS.pdf"
+      },
+      "r2drew": {
+        "p1": "major exams/tmua/euclid/r2drew/Euclid R2Drew Edition Paper 1 QP.pdf",
+        "p1_solutions": null
+      }
+    },
+    "source": "TMUA Euclid",
+    "sample": {
+      "note": "Euclid's two free sample papers (Oct 2026). No published key: answers solved and numerically checked by Claude; MS (AI) PDFs are AI-written TMUA-style worked solutions. Transcribed and sittable in /exam as euc_sample_p1 / euc_sample_p2 (set 'Sample').",
+      "solutions_ai_generated": true,
+      "papers": {
+        "P1": {
+          "qp": "major exams/tmua/euclid/set-sample/Euclid Sample Paper 1 QP.pdf",
+          "ms": "major exams/tmua/euclid/set-sample/Euclid Sample Paper 1 MS (AI).pdf",
+          "key": "BBCBBDCCDCABDDEFEDCD"
+        },
+        "P2": {
+          "qp": "major exams/tmua/euclid/set-sample/Euclid Sample Paper 2 QP.pdf",
+          "ms": "major exams/tmua/euclid/set-sample/Euclid Sample Paper 2 MS (AI).pdf",
+          "key": "ABACCEHBGFCADECEFHBG"
+        }
+      }
+    }
+  },
+  "tmua_jz_mocks": {
+    "note": "JZMaths TMUA mock sets A-E (major exams/tmua/jz/set-a..set-e), two papers each (200 MCQs). Unofficial mocks the student sits under exam conditions in the app's Pearson VUE simulator at /exam; deliberately harder than the real test. Solutions PDFs are the JZ mark schemes (answer letter, Tags/Difficulty line, worked solution). Classified into mock_tag_index.json as families JZ_P1/JZ_P2 (never into the official MAT/TMUA indexes); never source questions from memory, always read pages. Transcribed content lives in tutor_data/exams/questions/jz_<set>_p<n>.json.",
+    "sets": {
+      "A": {
+        "p1": "major exams/tmua/jz/set-a/JZ Set A Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/jz/set-a/JZ Set A Paper 1 MS.pdf",
+        "p2": "major exams/tmua/jz/set-a/JZ Set A Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/jz/set-a/JZ Set A Paper 2 MS.pdf"
+      },
+      "B": {
+        "p1": "major exams/tmua/jz/set-b/JZ Set B Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/jz/set-b/JZ Set B Paper 1 MS.pdf",
+        "p2": "major exams/tmua/jz/set-b/JZ Set B Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/jz/set-b/JZ Set B Paper 2 MS.pdf"
+      },
+      "C": {
+        "p1": "major exams/tmua/jz/set-c/JZ Set C Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/jz/set-c/JZ Set C Paper 1 MS.pdf",
+        "p2": "major exams/tmua/jz/set-c/JZ Set C Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/jz/set-c/JZ Set C Paper 2 MS.pdf"
+      },
+      "D": {
+        "p1": "major exams/tmua/jz/set-d/JZ Set D Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/jz/set-d/JZ Set D Paper 1 MS.pdf",
+        "p2": "major exams/tmua/jz/set-d/JZ Set D Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/jz/set-d/JZ Set D Paper 2 MS.pdf"
+      },
+      "E": {
+        "p1": "major exams/tmua/jz/set-e/JZ Set E Paper 1 QP.pdf",
+        "p1_solutions": "major exams/tmua/jz/set-e/JZ Set E Paper 1 MS.pdf",
+        "p2": "major exams/tmua/jz/set-e/JZ Set E Paper 2 QP.pdf",
+        "p2_solutions": "major exams/tmua/jz/set-e/JZ Set E Paper 2 MS.pdf"
+      }
+    }
+  },
+  "tmua_djs": {
+    "note": "Daniel J Smith (danieljsmith.org): Sets A-C (current), A0 (his original Set A, different questions) and Custom alpha (one Paper-2-style paper, NO key - answers worked out here). 180 MCQs, all transcribed (tutor_data/exams/questions/djs_*.json), answered, classified as DJS_P1 / DJS_P2, sittable in the /exam simulator. Answer keys only - no worked solutions. Sets A and B carry their key on the last page of the paper.",
+    "sets": {
+      "A": {
+        "p1": "major exams/tmua/daniel-j-smith/set-a/Daniel J Smith Set A Paper 1 QP.pdf",
+        "p2": "major exams/tmua/daniel-j-smith/set-a/Daniel J Smith Set A Paper 2 QP.pdf"
+      },
+      "B": {
+        "p1": "major exams/tmua/daniel-j-smith/set-b/Daniel J Smith Set B Paper 1 QP.pdf",
+        "p2": "major exams/tmua/daniel-j-smith/set-b/Daniel J Smith Set B Paper 2 QP.pdf"
+      },
+      "C": {
+        "p1": "major exams/tmua/daniel-j-smith/set-c/Daniel J Smith Set C Paper 1 QP.pdf",
+        "p2": "major exams/tmua/daniel-j-smith/set-c/Daniel J Smith Set C Paper 2 QP.pdf",
+        "p1_solutions": "major exams/tmua/daniel-j-smith/set-c/Daniel J Smith Set C Paper 1 Answers.pdf",
+        "p2_solutions": "major exams/tmua/daniel-j-smith/set-c/Daniel J Smith Set C Paper 2 Answers.pdf"
+      },
+      "A0": {
+        "p1": "major exams/tmua/daniel-j-smith/set-a0/Daniel J Smith Set A (original) Paper 1 QP.pdf",
+        "p2": "major exams/tmua/daniel-j-smith/set-a0/Daniel J Smith Set A (original) Paper 2 QP.pdf",
+        "solutions": "major exams/tmua/daniel-j-smith/set-a0/Daniel J Smith Set A (original) Answer Keys.pdf"
+      },
+      "ALPHA": {
+        "p2": "major exams/tmua/daniel-j-smith/set-alpha/Daniel J Smith Custom \u03b1 Paper 2 QP.pdf"
+      }
+    }
+  }
+}

@@ -1,0 +1,551 @@
+{
+ "unit": "tmua_2016_p1",
+ "generated": "2026-08-06",
+ "new_tags": [],
+ "questions": [
+  {
+   "id": "TMUA2016P1Q01",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "1",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "binomial_expansion",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q02",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "2",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "factor_or_remainder_theorem"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "working_backwards_from_options"
+   ],
+   "trap_type": [
+    "sign_error",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 2,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q03",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "3",
+   "topic": [
+    "calculus",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "tangent_or_normal_line",
+    "vector_or_coordinate_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q04",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "4",
+   "topic": [
+    "sequences_and_series"
+   ],
+   "technique": [
+    "telescoping_series",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q05",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "5",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "area_between_curves"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "careful_reading_of_constraints",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "sign_error",
+    "bounds_of_integration_wrong"
+   ],
+   "difficulty": 2,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q06",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "6",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "simultaneous_equations"
+   ],
+   "question_type": "modelling",
+   "cognitive_skill": [
+    "careful_reading_of_constraints",
+    "numerical_fluency",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "misread_question",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_applications",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q07",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "7",
+   "topic": [
+    "probability"
+   ],
+   "technique": [
+    "counting_by_cases"
+   ],
+   "question_type": "modelling",
+   "cognitive_skill": [
+    "multi_step_chaining",
+    "case_analysis",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "misread_question"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_applications",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q08",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "8",
+   "topic": [
+    "trigonometry"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q09",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "9",
+   "topic": [
+    "coordinate_geometry",
+    "geometry"
+   ],
+   "technique": [
+    "circle_equation_manipulation",
+    "graph_transformation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "sign_error",
+    "units_or_scale_error"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q10",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "10",
+   "topic": [
+    "trigonometry",
+    "graph_sketching"
+   ],
+   "technique": [
+    "sketching_to_count_intersections"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "division_by_zero_or_unsigned_variable",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q11",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "11",
+   "topic": [
+    "algebra",
+    "logarithms"
+   ],
+   "technique": [
+    "substitution",
+    "exponential_law_manipulation",
+    "log_law_manipulation",
+    "change_of_base"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q12",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "12",
+   "topic": [
+    "calculus",
+    "geometry"
+   ],
+   "technique": [
+    "optimisation_via_calculus",
+    "pythagoras_or_trig_in_triangle"
+   ],
+   "question_type": "modelling",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "multi_step_chaining",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": "P1_applications",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q13",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "13",
+   "topic": [
+    "algebra",
+    "graph_sketching"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "sketching_to_count_intersections"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "estimation_and_sanity_check",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q14",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "14",
+   "topic": [
+    "sequences_and_series"
+   ],
+   "technique": [
+    "geometric_series_sum",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q15",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "15",
+   "topic": [
+    "algebra",
+    "calculus"
+   ],
+   "technique": [
+    "completing_the_square"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "sign_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q16",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "16",
+   "topic": [
+    "algebra",
+    "logarithms"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "extraneous_root_not_rejected"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q17",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "17",
+   "topic": [
+    "trigonometry",
+    "graph_sketching"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "case_analysis",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "sign_error",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q18",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "18",
+   "topic": [
+    "calculus"
+   ],
+   "technique": [
+    "stationary_point_analysis"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "strict_vs_non_strict_inequality_confusion"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q19",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "19",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "binomial_expansion"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": "P1_pure",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2016P1Q20",
+   "paper": "TMUA_P1",
+   "year": 2016,
+   "part": "20",
+   "topic": [
+    "geometry"
+   ],
+   "technique": [
+    "pythagoras_or_trig_in_triangle",
+    "bounding_or_extreme_value_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "multi_step_chaining",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "premature_termination_before_final_step"
+   ],
+   "difficulty": 5,
+   "paper_section": "P1_applications",
+   "exam_family": "TMUA_P1",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "bm_george": 0.62,
+    "bm_lewis": 0.38
+  },
+  "shape": [
+    510,
+    1,
+    256
+  ],
+  "dtype": "torch.float32",
+  "voice_hash": "da9832874e4c0201",
+  "lang_code": "b",
+  "repo_id": "hexgrad/Kokoro-82M"
+}

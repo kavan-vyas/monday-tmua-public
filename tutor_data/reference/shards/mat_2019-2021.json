@@ -1,0 +1,616 @@
+{
+ "unit": "mat_2019-2021",
+ "generated": "2026-08-06",
+ "new_tags": [
+  {
+   "category": "technique",
+   "tag": "monotonicity_argument",
+   "why": "argument that a strictly increasing/decreasing function is injective, used to rule out repeated values (MAT2019I) and recurring across MAT/TMUA existence-of-solutions questions"
+  },
+  {
+   "category": "technique",
+   "tag": "prime_factorisation",
+   "why": "decomposing an integer (e.g. a factorial product) into prime powers to manipulate logs/exponents, reusable across number-theory and log questions"
+  }
+ ],
+ "questions": [
+  {
+   "id": "MAT2019A",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "A",
+   "topic": [
+    "algebra",
+    "calculus"
+   ],
+   "technique": [
+    "stationary_point_analysis"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "estimation_and_sanity_check",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019B",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "B",
+   "topic": [
+    "number_theory",
+    "algebra"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "case_split"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "working_backwards_from_options",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "missed_case",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019C",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "C",
+   "topic": [
+    "trigonometry",
+    "sequences_and_series",
+    "graph_sketching"
+   ],
+   "technique": [
+    "geometric_series_sum",
+    "trig_identity_application"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019D",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "D",
+   "topic": [
+    "algebra",
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "area_between_curves",
+    "definite_integral_evaluation",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "bounds_of_integration_wrong"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019E",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "E",
+   "topic": [
+    "trigonometry",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "factor_or_remainder_theorem",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "missed_case",
+    "premature_termination_before_final_step"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019F",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "F",
+   "topic": [
+    "trigonometry",
+    "algebra"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "substitution",
+    "case_split",
+    "sketching_to_count_intersections"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "extraneous_root_not_rejected"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019G",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "G",
+   "topic": [
+    "logarithms",
+    "algebra"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "substitution",
+    "simultaneous_equations",
+    "sketching_to_count_intersections"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "extraneous_root_not_rejected"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019H",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "H",
+   "topic": [
+    "geometry",
+    "trigonometry",
+    "sequences_and_series"
+   ],
+   "technique": [
+    "pythagoras_or_trig_in_triangle",
+    "substitution",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "case_analysis",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "extraneous_root_not_rejected",
+    "symmetry_wrongly_assumed"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019I",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "I",
+   "topic": [
+    "functions",
+    "algebra"
+   ],
+   "technique": [
+    "monotonicity_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "logical_precision",
+    "abstraction_from_specific_to_general",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "missed_case",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2019J",
+   "paper": "MAT",
+   "year": 2019,
+   "part": "J",
+   "topic": [
+    "geometry",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "symmetry_argument",
+    "vector_or_coordinate_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "abstraction_from_specific_to_general",
+    "logical_precision",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "symmetry_wrongly_assumed",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020A",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "A",
+   "topic": [
+    "coordinate_geometry",
+    "geometry"
+   ],
+   "technique": [
+    "vector_or_coordinate_argument"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020B",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "B",
+   "topic": [
+    "calculus",
+    "integration",
+    "algebra"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "factor_or_remainder_theorem"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "boundary_term_dropped"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020C",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "C",
+   "topic": [
+    "sequences_and_series",
+    "algebra"
+   ],
+   "technique": [
+    "arithmetic_series_sum",
+    "factor_or_remainder_theorem"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "algebraic_manipulation",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020D",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "D",
+   "topic": [
+    "trigonometry",
+    "algebra"
+   ],
+   "technique": [
+    "completing_the_square",
+    "trig_identity_application"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020E",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "E",
+   "topic": [
+    "calculus",
+    "integration",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "tangent_or_normal_line",
+    "definite_integral_evaluation",
+    "area_between_curves"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "bounds_of_integration_wrong",
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020F",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "F",
+   "topic": [
+    "logarithms",
+    "number_theory"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "prime_factorisation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "numerical_fluency",
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020G",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "G",
+   "topic": [
+    "calculus",
+    "algebra"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020H",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "H",
+   "topic": [
+    "calculus",
+    "graph_sketching",
+    "functions"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "graph_transformation",
+    "case_split"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "logical_precision",
+    "case_analysis",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020I",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "I",
+   "topic": [
+    "trigonometry",
+    "algebra",
+    "sequences_and_series"
+   ],
+   "technique": [
+    "geometric_series_sum",
+    "substitution",
+    "discriminant_condition",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "extraneous_root_not_rejected"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2020J",
+   "paper": "MAT",
+   "year": 2020,
+   "part": "J",
+   "topic": [
+    "geometry",
+    "graph_sketching",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "case_split",
+    "bounding_or_extreme_value_argument",
+    "graph_transformation"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "logical_precision",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "missed_case",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

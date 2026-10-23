@@ -1,0 +1,10 @@
+# Monday TTS worker — pinned to the versions known to work with the shipped voice
+# tensor (voice_hash da9832874e4c0201) and PLAN_VERSION 3. Build the isolated env with
+# `npm run voice:setup` (creates app/tts/.venv); voice.js auto-detects it. Without the
+# venv the worker falls back to system python3, which is exactly the fragility this pins.
+kokoro==0.9.4
+misaki==0.9.4
+torch==2.11.0
+soundfile==0.14.0
+numpy==2.4.4
+huggingface_hub==1.12.2

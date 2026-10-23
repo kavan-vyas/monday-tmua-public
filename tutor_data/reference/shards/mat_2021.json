@@ -1,0 +1,295 @@
+{
+ "unit": "mat_2021",
+ "generated": "2026-08-06",
+ "new_tags": [],
+ "questions": [
+  {
+   "id": "MAT2021A",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "A",
+   "topic": [
+    "geometry",
+    "trigonometry"
+   ],
+   "technique": [
+    "pythagoras_or_trig_in_triangle",
+    "symmetry_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021B",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "B",
+   "topic": [
+    "calculus",
+    "integration",
+    "algebra"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "factor_or_remainder_theorem"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "extraneous_root_not_rejected"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021C",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "C",
+   "topic": [
+    "calculus",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "tangent_or_normal_line"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021D",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "D",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "area_between_curves",
+    "definite_integral_evaluation",
+    "symmetry_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "bounds_of_integration_wrong",
+    "sign_error"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021E",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "E",
+   "topic": [
+    "probability",
+    "combinatorics",
+    "algebra"
+   ],
+   "technique": [
+    "simultaneous_equations",
+    "counting_by_cases"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021F",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "F",
+   "topic": [
+    "calculus",
+    "algebra",
+    "graph_sketching"
+   ],
+   "technique": [
+    "tangent_or_normal_line",
+    "stationary_point_analysis",
+    "sketching_to_count_intersections"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021G",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "G",
+   "topic": [
+    "trigonometry",
+    "sequences_and_series"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "symmetry_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021H",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "H",
+   "topic": [
+    "trigonometry",
+    "graph_sketching",
+    "logarithms",
+    "functions"
+   ],
+   "technique": [
+    "completing_the_square",
+    "graph_transformation",
+    "trig_identity_application"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021I",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "I",
+   "topic": [
+    "sequences_and_series",
+    "algebra"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "substitution_of_test_values"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "algebraic_manipulation",
+    "working_backwards_from_options"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2021J",
+   "paper": "MAT",
+   "year": 2021,
+   "part": "J",
+   "topic": [
+    "coordinate_geometry",
+    "algebra"
+   ],
+   "technique": [
+    "vector_or_coordinate_argument",
+    "case_split"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis",
+    "logical_precision",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 5,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

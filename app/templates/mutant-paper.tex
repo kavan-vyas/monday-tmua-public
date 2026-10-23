@@ -1,0 +1,71 @@
+% Mutant paper — the analysis half. Copied here by `mutant-paper.mjs brief`.
+%
+% The preamble is shared by every mutant paper so the set looks like a set; the commands
+% below are the four moves the documents make, and they are deliberately the ONLY four.
+% Replace everything between the markers, then: node scripts/mutant-paper.mjs build <slug>
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{enumitem}
+\usepackage{xcolor}\usepackage{titlesec}\usepackage{fancyhdr}\usepackage{mdframed}
+\definecolor{ink}{HTML}{1A1A1A}\definecolor{accent}{HTML}{9A3412}
+\definecolor{soft}{HTML}{F5F2ED}\definecolor{rule}{HTML}{C9C2B6}
+\color{ink}\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\titleformat{\section}{\large\bfseries\color{accent}}{\thesection.}{0.6em}{}
+\titlespacing{\section}{0pt}{15pt}{5pt}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small TMUA --- TOPIC, from papers you have sat}\rhead{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+% "box" is a TeX primitive (\box): naming an mdframed environment after it makes
+% pdflatex raise "Command \box already defined" and only carry on because it recovers.
+% The build refuses a non-zero exit, so the environment is called keybox instead.
+\newmdenv[linecolor=rule,linewidth=0.6pt,backgroundcolor=soft,innertopmargin=6pt,
+innerbottommargin=6pt,innerleftmargin=8pt,innerrightmargin=8pt,skipabove=6pt,skipbelow=6pt]{keybox}
+
+% The four moves. \bit names what he did; \eg states the question; \rulez is the thing to
+% learn; \test is what to do about it in the exam. Nothing else earns a command.
+\newcommand{\bit}[1]{\textbf{\color{accent}Your result.} #1\par}
+\newcommand{\rulez}[1]{\textbf{The rule.} #1\par}
+\newcommand{\test}[1]{\par\smallskip\textbf{Test in the exam.} #1\par}
+\newcommand{\eg}[1]{\textbf{The question.} #1\par}
+\newcommand{\ans}[1]{\textit{Answer: #1}}
+
+\begin{document}
+\begin{center}
+{\LARGE\bfseries TITLE --- what it has cost you}\\[5pt]
+{\small N questions, drawn only from papers you have actually sat: LIST THEM.\\
+Official answer keys for the TMUA papers; mock answers from their own mark schemes.\\
+Compiled DATE}
+\end{center}
+
+\begin{keybox}
+\textbf{Why this set exists.} The honest headline number for this topic, and why it is or is
+not the whole story. Name the pattern the record shows. Two or three sentences, no more ---
+this is the paragraph he will actually read.
+\end{keybox}
+
+% ─── one section per idea, ordered by how much it cost him ────────────────────────────────
+\section{The idea, stated as a rule not a topic}
+\bit{PAPER Qn, \textbf{wrong}/\textbf{right}, and whether it is still open in the backlog.
+Quote his own note: \emph{``\ldots''}}
+\eg{The question, restated in one or two lines. Not a transcription --- the companion has
+the real thing.}
+\rulez{The single transferable fact. If it fits on one line, it belongs here.}
+The working, short enough to follow without a pen. \ans{X, value}
+\test{What to do in the exam so this does not happen again. A physical action --- write the
+template, draw the table, check $n=1$ --- never ``be careful''.}
+
+% ─── the checklist, always last, always its own page ──────────────────────────────────────
+\newpage
+\section*{\color{accent}The TOPIC checklist}
+\begin{keybox}
+\begin{enumerate}[leftmargin=1.4em,itemsep=3pt,topsep=2pt]
+  \item One line per rule from the sections above, in the order you would use them.
+\end{enumerate}
+\end{keybox}
+\vfill
+{\small Where the answers came from. Where his results came from
+(\texttt{session\_memory.json}, \texttt{activity\_log.json}, \texttt{backlog.json}).\\
+Companion document: \textit{TITLE Questions (as printed)} --- the N questions themselves,
+one per page, uncut and unmarked.}
+\end{document}

@@ -1,0 +1,571 @@
+{
+ "unit": "tmua_2020_p2",
+ "generated": "2026-08-06",
+ "new_tags": [],
+ "questions": [
+  {
+   "id": "TMUA2020P2Q01",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "1",
+   "topic": [
+    "algebra",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "discriminant_condition",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q02",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "2",
+   "topic": [
+    "trigonometry"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "sign_error",
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q03",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "3",
+   "topic": [
+    "logic_and_proof",
+    "algebra"
+   ],
+   "technique": [
+    "divisibility_argument"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q04",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "4",
+   "topic": [
+    "logic_and_proof",
+    "number_theory"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "case_split"
+   ],
+   "question_type": "disprove_or_counterexample",
+   "cognitive_skill": [
+    "careful_reading_of_constraints",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q05",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "5",
+   "topic": [
+    "functions",
+    "graph_sketching"
+   ],
+   "technique": [
+    "graph_transformation",
+    "substitution_of_test_values"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "estimation_and_sanity_check",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "endpoint_or_edge_case_ignored",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q06",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "6",
+   "topic": [
+    "logic_and_proof",
+    "calculus",
+    "functions"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "symmetry_argument"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "abstraction_from_specific_to_general",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "necessary_confused_with_sufficient"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q07",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "7",
+   "topic": [
+    "logic_and_proof",
+    "geometry"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "case_split"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "converse_assumed_from_implication"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q08",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "8",
+   "topic": [
+    "logic_and_proof",
+    "algebra"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "absolute_value_case_analysis"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "strict_vs_non_strict_inequality_confusion",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q09",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "9",
+   "topic": [
+    "trigonometry",
+    "algebra"
+   ],
+   "technique": [
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "careful_reading_of_constraints",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "units_or_scale_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q10",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "10",
+   "topic": [
+    "logic_and_proof",
+    "algebra"
+   ],
+   "technique": [
+    "inequality_manipulation",
+    "counterexample_construction"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "symmetry_wrongly_assumed",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q11",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "11",
+   "topic": [
+    "logic_and_proof",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "substitution_of_test_values",
+    "symmetry_argument"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "pattern_recognition",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q12",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "12",
+   "topic": [
+    "calculus",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "graph_transformation"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "logical_precision",
+    "spatial_visualisation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "necessary_confused_with_sufficient",
+    "converse_assumed_from_implication"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q13",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "13",
+   "topic": [
+    "calculus",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "inequality_manipulation",
+    "definite_integral_evaluation"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "logical_precision",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q14",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "14",
+   "topic": [
+    "sequences_and_series",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "arithmetic_series_sum",
+    "counterexample_construction"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "over-restrictive_case_assumption",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q15",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "15",
+   "topic": [
+    "trigonometry",
+    "sequences_and_series",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "transformation_of_summation_index"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "symbolic_bookkeeping",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q16",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "16",
+   "topic": [
+    "calculus",
+    "integration",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "substitution"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q17",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "17",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "bounding_or_extreme_value_argument",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "numerical_fluency",
+    "case_analysis",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "premature_termination_before_final_step",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q18",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "18",
+   "topic": [
+    "algebra",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "polynomial_root_relations",
+    "substitution_of_test_values"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "logical_precision",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "missed_case",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 5,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q19",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "19",
+   "topic": [
+    "logic_and_proof",
+    "combinatorics"
+   ],
+   "technique": [
+    "case_split",
+    "truth_table_or_exhaustive_check"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "case_analysis",
+    "logical_precision",
+    "multi_step_chaining",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "missed_case",
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 5,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2020P2Q20",
+   "paper": "TMUA_P2",
+   "year": 2020,
+   "part": "20",
+   "topic": [
+    "logic_and_proof"
+   ],
+   "technique": [
+    "converse_or_contrapositive_analysis"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "symbolic_bookkeeping",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "converse_assumed_from_implication",
+    "necessary_confused_with_sufficient"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

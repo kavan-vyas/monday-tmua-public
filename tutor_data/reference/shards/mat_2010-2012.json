@@ -1,0 +1,885 @@
+{
+ "unit": "mat_2010-2012",
+ "generated": "2026-08-06",
+ "new_tags": [],
+ "questions": [
+  {
+   "id": "MAT2010A",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "A",
+   "topic": [
+    "algebra",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "discriminant_condition",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "missed_case"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010B",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "B",
+   "topic": [
+    "sequences_and_series",
+    "algebra"
+   ],
+   "technique": [
+    "geometric_series_sum",
+    "transformation_of_summation_index"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "pattern_recognition",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "misread_question"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010C",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "C",
+   "topic": [
+    "trigonometry",
+    "algebra"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "missed_case",
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010D",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "D",
+   "topic": [
+    "trigonometry",
+    "graph_sketching"
+   ],
+   "technique": [
+    "graph_transformation"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "sign_error",
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010E",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "E",
+   "topic": [
+    "logarithms"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "change_of_base"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "numerical_fluency",
+    "estimation_and_sanity_check",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010F",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "F",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "multi_step_chaining",
+    "pattern_recognition",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010G",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "G",
+   "topic": [
+    "number_theory",
+    "functions"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "case_split",
+    "counting_by_cases"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "case_analysis",
+    "multi_step_chaining",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "missed_case",
+    "double_counting"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010H",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "H",
+   "topic": [
+    "algebra",
+    "functions",
+    "graph_sketching"
+   ],
+   "technique": [
+    "case_split",
+    "bounding_or_extreme_value_argument",
+    "polynomial_root_relations"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "abstraction_from_specific_to_general",
+    "logical_precision",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "over-restrictive_case_assumption",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010I",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "I",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "stationary_point_analysis"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "sign_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2010J",
+   "paper": "MAT",
+   "year": 2010,
+   "part": "J",
+   "topic": [
+    "algebra",
+    "number_theory"
+   ],
+   "technique": [
+    "inequality_manipulation",
+    "log_law_manipulation",
+    "case_split"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "logical_precision",
+    "abstraction_from_specific_to_general",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011A",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "A",
+   "topic": [
+    "algebra",
+    "graph_sketching",
+    "functions"
+   ],
+   "technique": [
+    "factor_or_remainder_theorem",
+    "polynomial_root_relations"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "sign_error",
+    "missed_case"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011B",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "B",
+   "topic": [
+    "algebra",
+    "geometry"
+   ],
+   "technique": [
+    "discriminant_condition",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011C",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "C",
+   "topic": [
+    "sequences_and_series",
+    "algebra"
+   ],
+   "technique": [
+    "discriminant_condition",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "estimation_and_sanity_check",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011D",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "D",
+   "topic": [
+    "trigonometry"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "careful_reading_of_constraints",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "missed_case",
+    "double_counting"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011E",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "E",
+   "topic": [
+    "geometry",
+    "trigonometry"
+   ],
+   "technique": [
+    "pythagoras_or_trig_in_triangle",
+    "trig_identity_application"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011F",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "F",
+   "topic": [
+    "coordinate_geometry",
+    "trigonometry"
+   ],
+   "technique": [
+    "completing_the_square",
+    "circle_equation_manipulation",
+    "trig_identity_application"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "domain_or_range_restriction_missed",
+    "strict_vs_non_strict_inequality_confusion"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011G",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "G",
+   "topic": [
+    "calculus",
+    "integration",
+    "graph_sketching"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "substitution",
+    "graph_transformation"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "bounds_of_integration_wrong",
+    "misread_question"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011H",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "H",
+   "topic": [
+    "algebra",
+    "logarithms"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "factor_or_remainder_theorem",
+    "change_of_base"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "extraneous_root_not_rejected",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011I",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "I",
+   "topic": [
+    "trigonometry"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "bounding_or_extreme_value_argument",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "abstraction_from_specific_to_general",
+    "logical_precision",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "missed_case",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2011J",
+   "paper": "MAT",
+   "year": 2011,
+   "part": "J",
+   "topic": [
+    "number_theory",
+    "sequences_and_series",
+    "functions"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "case_split",
+    "counting_by_cases"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "abstraction_from_specific_to_general",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012A",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "A",
+   "topic": [
+    "coordinate_geometry",
+    "geometry"
+   ],
+   "technique": [
+    "circle_equation_manipulation",
+    "tangent_or_normal_line",
+    "substitution_of_test_values"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "working_backwards_from_options",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "sign_error",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012B",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "B",
+   "topic": [
+    "number_theory",
+    "algebra"
+   ],
+   "technique": [
+    "parity_argument",
+    "exponential_law_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "missed_case",
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 2,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012C",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "C",
+   "topic": [
+    "algebra",
+    "logarithms",
+    "trigonometry"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "change_of_base",
+    "trig_identity_application",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "numerical_fluency",
+    "estimation_and_sanity_check",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012D",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "D",
+   "topic": [
+    "coordinate_geometry",
+    "algebra",
+    "graph_sketching"
+   ],
+   "technique": [
+    "graph_transformation",
+    "case_split",
+    "area_between_curves"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "case_analysis",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "missed_case",
+    "boundary_term_dropped"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012E",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "E",
+   "topic": [
+    "algebra",
+    "graph_sketching",
+    "functions"
+   ],
+   "technique": [
+    "polynomial_root_relations",
+    "factor_or_remainder_theorem",
+    "graph_transformation"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "pattern_recognition",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "sign_error",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012F",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "F",
+   "topic": [
+    "calculus",
+    "integration",
+    "trigonometry"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "symmetry_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "estimation_and_sanity_check",
+    "logical_precision",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012G",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "G",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "simultaneous_equations",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "division_by_zero_or_unsigned_variable",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012H",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "H",
+   "topic": [
+    "calculus",
+    "integration",
+    "trigonometry"
+   ],
+   "technique": [
+    "definite_integral_evaluation",
+    "symmetry_argument",
+    "graph_transformation"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "logical_precision",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "missed_case",
+    "premature_termination_before_final_step"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012I",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "I",
+   "topic": [
+    "geometry",
+    "trigonometry"
+   ],
+   "technique": [
+    "pythagoras_or_trig_in_triangle",
+    "trig_identity_application"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "units_or_scale_error"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "MAT2012J",
+   "paper": "MAT",
+   "year": 2012,
+   "part": "J",
+   "topic": [
+    "geometry",
+    "trigonometry"
+   ],
+   "technique": [
+    "symmetry_argument",
+    "pythagoras_or_trig_in_triangle",
+    "trig_identity_application"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": null,
+   "exam_family": "MAT",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}

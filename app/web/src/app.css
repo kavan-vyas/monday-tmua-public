@@ -1,0 +1,1593 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   MONDAY — application stylesheet
+   ───────────────────────────────────────────────────────────────────────────
+   Every value here comes from tokens.css, which is GENERATED from
+   app/design/tokens.js — the same file that feeds the dashboard, the tracker
+   and app/server/mood.js. If you need a colour or a size, use a token. A raw
+   hex in this file is a bug: it will drift from the other three surfaces, and
+   that drift is exactly what this redesign existed to remove.
+
+   House rules:
+     · type is IBM Plex Sans; mono is for numbers, code, paths and IDs only
+     · one hairline (--line), not a 2px stroke on everything
+     · one soft elevation scale, not a hard offset shadow on every element
+     · uppercase + tracking is an EYEBROW device, used once per region at most
+     · the brand gold is IDENTITY ONLY — it is not a hover state
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import './fonts.css';
+@import './tokens.css';
+
+/* ═══ appearance: density and font size ═══════════════════════════════════
+   Both work by REDEFINING TOKENS on the root element, never by overriding
+   individual rules. Everything downstream is written in var(--sp-*) and
+   var(--t-*), so a pane written next year follows these settings without
+   knowing they exist — which is the whole reason the token file is the single
+   source of truth. App.jsx stamps data-density / data-fontsize; the defaults
+   need no block because they ARE tokens.css.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root[data-density='compact'] {
+  --sp-5: 8px;    /* 12 */
+  --sp-6: 12px;   /* 16 */
+  --sp-7: 14px;   /* 20 */
+  --sp-8: 16px;   /* 24 */
+  --sp-9: 22px;   /* 32 */
+  --sp-10: 28px;  /* 40 */
+  --lh-prose: 1.5;
+  --layout-gutter: 56px;
+}
+:root[data-fontsize='small'] {
+  --t-3xs: 9px;  --t-2xs: 10px; --t-xs: 11px; --t-sm: 12px; --t-base: 13px;
+  --t-md: 14px;  --t-lg: 17px;  --t-xl: 20px; --t-2xl: 24px; --t-3xl: 30px;
+}
+:root[data-fontsize='large'] {
+  --t-3xs: 11px; --t-2xs: 12px; --t-xs: 13px; --t-sm: 15px; --t-base: 16px;
+  --t-md: 18px;  --t-lg: 22px;  --t-xl: 26px; --t-2xl: 32px; --t-3xl: 38px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* The workspace is exactly the viewport, never a page that scrolls. Every pane owns its
+   own scroller, so a document-level scrollbar can only ever be an accident — and on a
+   fractional-DPR display (a scaled 3440x1440, say) subpixel rounding overflows the shell
+   by a fraction of a pixel, which is enough to produce a sliver of scroll and a band of
+   whitespace under the app. dvh rather than vh so a laptop's dynamic toolbars cannot do
+   the same thing from the other direction. */
+html, body, #root { height: 100%; overflow: hidden; }
+body { overscroll-behavior: none; }
+.shell { height: 100dvh; max-height: 100dvh; overflow: hidden; }
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--t-sm);
+  line-height: var(--lh-ui);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.shell { display: flex; flex-direction: column; min-height: 0; }
+
+/* Numbers that must line up: timers, scores, costs, page counts, token counts. */
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* The one shouting device left in the app. One per region, at 10px, never on
+   body copy and never on a control label. */
+.eyebrow {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi);
+  letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3);
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-blue);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+
+/* ═══════ header ═══════ */
+header {
+  display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap;
+  padding: var(--sp-4) var(--sp-6);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+/* The wordmark. The ONLY place the brand gold appears as a fill in the chrome. */
+.logo {
+  font-size: var(--t-sm); font-weight: var(--fw-bold);
+  letter-spacing: .06em; color: var(--ink);
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+}
+.logo::before {
+  content: ''; width: 6px; height: 6px; border-radius: var(--r-full);
+  background: var(--c-brand); flex-shrink: 0;
+}
+.dot { width: 7px; height: 7px; border-radius: var(--r-full); background: var(--ink-3); flex-shrink: 0; }
+.dot.connected { background: var(--c-green); }
+.dot.disconnected { background: var(--c-red); }
+.spacer { margin-left: auto; }
+.cost { color: var(--ink-3); font-family: var(--font-mono); font-size: var(--t-2xs); font-variant-numeric: tabular-nums; }
+
+/* Above ~1620px the status line and every control fit on one line; below it this
+   zero-height flex break splits the header into identity+status / controls,
+   rather than orphaning whichever buttons happen to fall off the end. */
+.hdr-break { display: none; flex-basis: 100%; height: 0; }
+@media (max-width: 1619px) { .hdr-break { display: block; } }
+
+/* ═══════ controls ═══════ */
+.btn {
+  font-family: inherit; font-size: var(--t-sm); font-weight: var(--fw-medium);
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+  padding: var(--sp-3) var(--sp-5); cursor: pointer;
+  transition: background var(--motion-fast) var(--motion-ease),
+              border-color var(--motion-fast) var(--motion-ease),
+              color var(--motion-fast) var(--motion-ease);
+  white-space: nowrap;
+}
+.btn:hover { background: var(--sunken); border-color: var(--ink-3); }
+.btn:active { background: var(--raised); }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn:disabled:hover { background: var(--surface); border-color: var(--line-strong); }
+.btn.tiny { font-size: var(--t-xs); padding: var(--sp-2) var(--sp-4); }
+/* Semantic buttons — colour carries the meaning, not decoration. */
+.btn.stop { background: var(--c-red); border-color: var(--c-red); color: #fff; }
+.btn.stop:hover { background: var(--c-red-ink); border-color: var(--c-red-ink); }
+.btn.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.btn.save { background: var(--c-green); border-color: var(--c-green); color: #fff; }
+.btn.theme { color: var(--ink-2); }
+.sel {
+  font: inherit; font-size: var(--t-xs); font-family: var(--font-sans);
+  background: var(--surface); color: var(--ink-2);
+  border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+  padding: var(--sp-2) var(--sp-3); cursor: pointer;
+}
+.sel:hover { border-color: var(--ink-3); color: var(--ink); }
+
+/* ═══════ panes ═══════════════════════════════════════════════════════════
+   Generic pane chrome. Everything a pane needs — frame, tab bar, toolbar,
+   body, footer — is defined here and inherited, so a NEW pane type (video,
+   grades, whatever comes next) joins by using .tab-fill + .pane-toolbar +
+   .pane-body and gets the house look for free. Resist styling pane internals
+   from scratch; extend these.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.cols { flex: 1; display: flex; min-height: 0; overflow: hidden; padding: var(--sp-5); gap: 0; background: var(--bg); }
+.col {
+  display: flex; flex-direction: column; min-height: 0; min-width: 110px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+}
+.col.focused { border-color: var(--line-strong); box-shadow: var(--shadow-2); }
+.col.collapsed {
+  flex: 0 0 32px; width: 32px; min-width: 32px; cursor: pointer;
+  align-items: center; justify-content: flex-start; padding-top: var(--sp-5);
+}
+.col.collapsed:hover { background: var(--sunken); }
+.col.collapsed.drop-on { border-color: var(--c-blue); background: color-mix(in srgb, var(--c-blue) 12%, var(--surface)); }
+/* While a divider is dragged nothing below it may take the mouse: an iframe
+   (video, dashboard) swallows mousemove and the drag sticks mid-way. */
+body.col-resizing { cursor: col-resize; user-select: none; }
+body.col-resizing .col { pointer-events: none; }
+.cols-empty {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: var(--sp-4); color: var(--ink-3); font-size: var(--t-xs); letter-spacing: .06em; text-transform: uppercase;
+}
+.cols-empty-actions { display: flex; gap: var(--sp-3); }
+.vlabel {
+  writing-mode: vertical-rl; font-size: var(--t-2xs); font-weight: var(--fw-medium);
+  letter-spacing: .06em; color: var(--ink-3);
+}
+.resizer { flex: 0 0 var(--sp-5); cursor: col-resize; position: relative; }
+.resizer::after {
+  content: ''; position: absolute; inset: 20% 50%; width: 1px;
+  transform: translateX(-50%); background: transparent;
+  transition: background var(--motion-fast) var(--motion-ease);
+}
+.resizer:hover::after { background: var(--c-blue); }
+.resizer.static { cursor: default; }
+.resizer.static:hover::after { background: transparent; }
+
+/* ── tab bar ─────────────────────────────────────────────────────────────── */
+.tabbar {
+  display: flex; align-items: stretch;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface); min-height: 34px; overflow-x: auto; flex-shrink: 0;
+}
+.tab {
+  display: inline-flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4) var(--sp-3) var(--sp-5);
+  font-size: var(--t-xs); font-weight: var(--fw-medium);
+  cursor: grab; white-space: nowrap; position: relative;
+  color: var(--ink-3); background: transparent; max-width: 190px; overflow: hidden;
+  /* A tab must never be squeezed narrower than its own name. .tabbar is a flex
+     row with overflow-x:auto, so without this every tab shrinks toward
+     min-content as more are opened — and because .tab .x is flex-shrink:0, the
+     LABEL is what collapses. Eight tabs in one column rendered as eight bare
+     close buttons. Hold the width and let the bar scroll, which is what the
+     overflow-x on .tabbar was always for. */
+  flex: 0 0 auto; min-width: 5.5rem;
+  transition: color var(--motion-fast) var(--motion-ease), background var(--motion-fast) var(--motion-ease);
+}
+.tab-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.tab .x { flex-shrink: 0; }
+/* Active tab reads by ink weight plus a 2px underline — no fill, so a row of
+   tabs stays quiet. The underline is the mode hue, so a pane in EXAM looks it. */
+.tab.active { color: var(--ink); background: transparent; }
+.tab.active::after {
+  content: ''; position: absolute; left: var(--sp-4); right: var(--sp-4); bottom: 0;
+  height: 2px; background: var(--c-slate); border-radius: var(--r-full) var(--r-full) 0 0;
+}
+.tab:hover { color: var(--ink); background: var(--sunken); }
+.tab .x, .tabbar-end .x {
+  border: none; background: none; color: var(--ink-3); font-size: var(--t-md); cursor: pointer;
+  font-family: inherit; line-height: 1; padding: 0 var(--sp-1); border-radius: var(--r-xs);
+}
+.tab .x:hover, .tabbar-end .x:hover { background: var(--raised); color: var(--c-red-ink); }
+.tabbar-end { margin-left: auto; display: flex; align-items: center; padding: 0 var(--sp-3); }
+
+/* ── pane body + the drag/snap affordance ────────────────────────────────── */
+.col-body { flex: 1; min-height: 0; position: relative; display: flex; }
+.tab-holder { flex: 1; min-width: 0; min-height: 0; display: flex; }
+.tab-fill { flex: 1; display: flex; flex-direction: column; min-height: 0; min-width: 0; }
+.drop-catcher { position: absolute; inset: 0; z-index: 40; }
+.snap {
+  position: absolute; z-index: 39; pointer-events: none;
+  background: color-mix(in srgb, var(--c-blue) 12%, transparent);
+  border: 2px solid var(--c-blue); border-radius: var(--r-sm);
+}
+.snap-stack { inset: 0; }
+.snap-left { top: 0; bottom: 0; left: 0; width: 40%; }
+.snap-right { top: 0; bottom: 0; right: 0; width: 40%; }
+
+/* ── shared pane toolbar ─────────────────────────────────────────────────────
+   Used by the file pane and the PDF pane today. Built as a flex row of small
+   controls with a `.pane-tools` group that can hold a tool cluster — a pen /
+   highlighter / arrow set drops in here without redesigning the bar. */
+.file-toolbar, .pane-toolbar {
+  display: flex; align-items: center; gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--line); background: var(--surface); flex-shrink: 0;
+  min-height: 38px;
+}
+.pane-tools { display: flex; align-items: center; gap: var(--sp-1); }
+.pane-tools .btn.tiny { padding: var(--sp-2) var(--sp-3); }
+.pane-sep { width: 1px; align-self: stretch; margin: var(--sp-2) var(--sp-2); background: var(--line); }
+.pane-body { flex: 1; overflow: auto; min-height: 0; }
+
+/* ═══════ the transcript ═══════════════════════════════════════════════════
+   NOT a chat of coloured bubbles. A transcript: one column, both speakers on
+   the same left margin, no fills, separated by rhythm and a hairline.
+
+   Speaker is legible three independent ways, none of which tint the block:
+     1. the gutter label   — "MONDAY" on its mood fill, or a quiet "You"
+     2. the gutter rule    — 2px in the mood colour for Monday, absent for the student
+     3. the ink weight     — Monday in full --ink, the student in --ink-2
+   ═══════════════════════════════════════════════════════════════════════════ */
+.chat-scroll {
+  flex: 1; overflow: auto; padding: var(--sp-6) var(--sp-7);
+  display: flex; flex-direction: column; scroll-behavior: smooth;
+}
+.turn {
+  display: grid;
+  grid-template-columns: var(--layout-gutter) minmax(0, 1fr);
+  gap: 0 var(--sp-6);
+  padding: var(--sp-6) 0;
+  border-top: 1px solid var(--line);
+  align-items: start;
+}
+.turn:first-child { border-top: none; }
+
+/* The gutter. Fixed width so every turn's body starts at the same x. */
+.turn-tag {
+  grid-column: 1; display: flex; flex-direction: column; align-items: flex-end;
+  gap: var(--sp-2); position: relative; min-height: 18px; padding-right: var(--sp-4);
+}
+/* Rule 2 — the mood-coloured stroke. Monday only; inline colour from moodColor(). */
+.turn.assistant .turn-tag::after, .turn.proactive .turn-tag::after {
+  content: ''; position: absolute; right: 0; top: 2px; bottom: calc(var(--sp-6) * -1);
+  width: 2px; border-radius: var(--r-full); background: currentColor;
+}
+.turn-body { grid-column: 2; min-width: 0; }
+
+/* Rule 1 — the label. Monday's carries the mood fill (and the derived legible
+   ink); the student's is a quiet piece of meta, deliberately not a badge. */
+.tag-name {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .08em;
+  padding: 2px var(--sp-3); border-radius: var(--r-xs); white-space: nowrap;
+}
+.turn.user .tag-name {
+  background: none !important; color: var(--ink-3) !important;
+  padding: 2px 0; font-weight: var(--fw-medium); letter-spacing: .06em;
+}
+.tag-note {
+  font-size: var(--t-3xs); color: var(--ink-3); text-align: right;
+  font-family: var(--font-mono); letter-spacing: .02em;
+}
+.tag-play {
+  font: inherit; font-size: var(--t-2xs); line-height: 1; cursor: pointer;
+  padding: var(--sp-1) var(--sp-3); color: var(--ink-3);
+  border: 1px solid var(--line-strong); border-radius: var(--r-xs); background: var(--surface);
+}
+.tag-play:hover { color: var(--ink); border-color: var(--ink-3); background: var(--sunken); }
+
+/* Rule 3 — ink weight. the student's own words sit back; Monday's answer is the
+   thing you are reading. Both are AA or better on the page ground. */
+.turn.assistant .turn-body, .turn.proactive .turn-body { color: var(--ink); }
+.turn.user .turn-body { color: var(--ink-2); }
+.turn-body { font-size: var(--t-base); line-height: var(--lh-prose); max-width: var(--layout-measure); }
+/* A proactive nudge is Monday starting the conversation — it must not read as
+   an answer to something the student asked. A dashed rule, not another colour. */
+.turn.proactive .turn-tag::after { background: repeating-linear-gradient(
+  to bottom, currentColor 0 4px, transparent 4px 8px); }
+.turn.streaming .turn-body { opacity: .82; }
+
+/* Tool calls: Monday narrating itself. A quiet line in the gutter's right edge,
+   not a chip floating in the middle of the transcript. */
+.tool-chip {
+  display: grid; grid-template-columns: var(--layout-gutter) minmax(0, 1fr);
+  gap: 0 var(--sp-6); padding: var(--sp-2) 0;
+  font-size: var(--t-xs); color: var(--ink-3); font-style: italic;
+}
+.tool-chip > * { grid-column: 2; }
+.tc-mark { grid-column: 1; justify-self: end; padding-right: var(--sp-4); font-style: normal; color: var(--c-slate); }
+.img-note { font-size: var(--t-3xs); color: var(--ink-3); margin-bottom: var(--sp-2); font-family: var(--font-mono); }
+
+/* ═══════ markdown inside a turn ═══════ */
+.turn-body p + p, .turn-body ul, .turn-body ol, .turn-body table, .turn-body pre, .turn-body blockquote {
+  margin-top: var(--sp-5);
+}
+.turn-body ul, .turn-body ol { padding-left: var(--sp-7); }
+.turn-body li + li { margin-top: var(--sp-2); }
+.turn-body h1, .turn-body h2, .turn-body h3 {
+  font-size: var(--t-md); font-weight: var(--fw-semi); line-height: var(--lh-tight);
+  margin: var(--sp-6) 0 var(--sp-3);
+}
+.turn-body h1 { font-size: var(--t-lg); }
+/* Emphasis is WEIGHT, not a yellow highlighter. */
+.turn-body strong { font-weight: var(--fw-semi); color: var(--ink); }
+.turn-body a { color: var(--c-blue-ink); text-underline-offset: 2px; }
+.turn-body blockquote {
+  border-left: 2px solid var(--line-strong); padding-left: var(--sp-5); color: var(--ink-2);
+}
+.turn-body code {
+  font-family: var(--font-mono); font-size: .88em;
+  background: var(--sunken); border: 1px solid var(--line);
+  border-radius: var(--r-xs); padding: 1px var(--sp-2);
+}
+.turn-body pre {
+  background: var(--sunken); border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: var(--sp-5); overflow-x: auto;
+}
+.turn-body pre code { border: none; background: none; padding: 0; font-size: var(--t-xs); }
+.turn-body table { border-collapse: collapse; font-size: var(--t-sm); display: block; overflow-x: auto; max-width: 100%; }
+.turn-body th, .turn-body td { border: 1px solid var(--line); padding: var(--sp-3) var(--sp-4); text-align: left; }
+.turn-body th { background: var(--sunken); font-weight: var(--fw-semi); }
+
+/* ═══════ KaTeX ═══════════════════════════════════════════════════════════
+   The multiplier below is MEASURED, not guessed. KaTeX sets maths in KaTeX_Main
+   (Computer Modern), whose x-height is a smaller fraction of its em than a UI
+   face's. Left at 1em, every equation sits optically small in its sentence.
+
+   Measured in-browser by rendering 'x' at 100px and counting inked rows
+   (the harness is at ?latex=1):
+
+     IBM Plex Sans  x-height = 0.52 em
+     KaTeX_Main     x-height = 0.44 em
+     match          = 0.52 / 0.44 = 1.1818  →  1.18
+
+   NOTE, because it matters: the old value was 1.08, and it was WRONG even for
+   the monospace body it was written for. SF Mono measures 0.55 em, so that body
+   needed 1.25 — maths in the old app was already sitting ~14% small against its
+   own text. 1.18 is both correct for the new face and a fix to a latent bug.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.turn-body .katex { font-size: 1.18em; line-height: normal; }
+
+/* Inline maths must FLOW in the sentence — never break out into a block. */
+.turn-body p .katex, .turn-body li .katex, .turn-body td .katex, .turn-body th .katex {
+  padding: 0; background: none; border: none;
+}
+/* A long inline expression scrolls rather than blowing out the column. */
+.turn-body .katex:not(.katex-display > .katex) { max-width: 100%; }
+
+/* Display maths: its own band, centred, scrollable when it must be.
+   overflow-y visible or tall fractions and integrals get clipped at the top. */
+.turn-body .katex-display {
+  margin: var(--sp-6) 0; padding: var(--sp-5) var(--sp-6);
+  background: var(--sunken); border: 1px solid var(--line); border-radius: var(--r-sm);
+  overflow-x: auto; overflow-y: hidden;
+}
+/* Relative to the 1.18 inline match, display steps up a further 1.06 — the
+   conventional display/text ratio, so a standalone equation reads as a figure. */
+.turn-body .katex-display > .katex { font-size: 1.06em; }
+
+/* ═══════ composer ═══════ */
+.paste-strip { display: flex; gap: var(--sp-3); padding: var(--sp-3) var(--sp-7); }
+.paste-thumb { position: relative; }
+.paste-thumb img { height: 44px; border: 1px solid var(--line-strong); border-radius: var(--r-sm); display: block; }
+.paste-thumb button {
+  position: absolute; top: -6px; right: -6px; background: var(--ink); color: var(--bg);
+  border: none; border-radius: var(--r-full); width: 18px; height: 18px;
+  font-size: var(--t-2xs); cursor: pointer; line-height: 1;
+}
+.quick-row {
+  display: flex; gap: var(--sp-3); padding: var(--sp-4) var(--sp-7) 0;
+  flex-wrap: wrap; align-items: center;
+}
+.quick-spacer { flex: 1; }
+.chat-input { display: flex; gap: var(--sp-4); padding: var(--sp-5) var(--sp-7) var(--sp-6); align-items: flex-end; }
+.chat-input textarea {
+  flex: 1; resize: none; height: 66px; padding: var(--sp-4) var(--sp-5);
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: var(--r-md);
+  font-family: inherit; font-size: var(--t-base); line-height: var(--lh-ui);
+}
+.chat-input textarea::placeholder { color: var(--ink-3); }
+.chat-input textarea:focus { outline: none; border-color: var(--c-blue); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c-blue) 16%, transparent); }
+.chat-input .btn { height: 38px; }
+
+/* ═══════ files ═══════ */
+.tree-scroll { flex: 1; overflow: auto; padding: var(--sp-4); }
+.tree-row {
+  padding: var(--sp-2) var(--sp-3); cursor: pointer; white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis; font-size: var(--t-xs);
+  border-radius: var(--r-xs); color: var(--ink-2);
+}
+.tree-row:hover { background: var(--sunken); color: var(--ink); }
+.tree-row.dir { font-weight: var(--fw-semi); color: var(--ink); }
+.tree-row.file { font-family: var(--font-mono); font-size: var(--t-2xs); }
+.dropzone {
+  margin: var(--sp-4); padding: var(--sp-5); text-align: center;
+  font-size: var(--t-2xs); color: var(--ink-3);
+  border: 1px dashed var(--line-strong); border-radius: var(--r-sm);
+  transition: all var(--motion-fast) var(--motion-ease);
+}
+.dropzone:hover { background: var(--sunken); border-color: var(--c-blue); color: var(--ink-2); }
+
+/* ═══════ file pane ═══════ */
+.dirty { color: var(--c-amber); font-size: var(--t-md); line-height: 1; }
+.editor {
+  flex: 1; resize: none; border: none; padding: var(--sp-6); min-height: 0;
+  background: var(--surface); color: var(--ink);
+  font-family: var(--font-mono); font-size: var(--t-xs); line-height: var(--lh-prose);
+}
+.editor:focus { outline: none; }
+/* Rendered prose (session notes etc.). This is a DOCUMENT — it gets document
+   typography, not the terminal treatment the old sheet gave it. */
+.ws-body {
+  flex: 1; overflow: auto; padding: var(--sp-7) var(--sp-8);
+  line-height: var(--lh-prose); font-size: var(--t-base); max-width: 72ch;
+}
+.ws-body h1, .ws-body h2, .ws-body h3 {
+  line-height: var(--lh-tight); font-weight: var(--fw-semi); margin: var(--sp-8) 0 var(--sp-4);
+}
+.ws-body h1 { font-size: var(--t-xl); margin-top: 0; }
+.ws-body h2 { font-size: var(--t-lg); padding-bottom: var(--sp-3); border-bottom: 1px solid var(--line); }
+.ws-body h3 { font-size: var(--t-md); }
+.ws-body p + p { margin-top: var(--sp-5); }
+.ws-body ul, .ws-body ol { padding-left: var(--sp-7); margin: var(--sp-4) 0; }
+.ws-body li + li { margin-top: var(--sp-2); }
+.ws-body pre {
+  background: var(--sunken); border: 1px solid var(--line); border-radius: var(--r-sm);
+  padding: var(--sp-5); overflow-x: auto; font-family: var(--font-mono); font-size: var(--t-xs);
+}
+.ws-body code { font-family: var(--font-mono); font-size: .88em; background: var(--sunken); padding: 1px var(--sp-2); border-radius: var(--r-xs); }
+.ws-body table { border-collapse: collapse; margin: var(--sp-5) 0; font-size: var(--t-sm); display: block; overflow-x: auto; }
+.ws-body th, .ws-body td { border: 1px solid var(--line); padding: var(--sp-3) var(--sp-4); text-align: left; }
+.ws-body th { background: var(--sunken); font-weight: var(--fw-semi); }
+.ws-body hr { border: none; border-top: 1px solid var(--line); margin: var(--sp-8) 0; }
+/* Was a yellow highlighter block. Emphasis is weight. */
+.ws-body strong { font-weight: var(--fw-semi); color: var(--ink); }
+.ws-body blockquote { border-left: 2px solid var(--line-strong); padding-left: var(--sp-5); color: var(--ink-2); margin: var(--sp-5) 0; }
+.ws-body .katex { font-size: 1.18em; line-height: normal; }
+.ws-body .katex-display {
+  margin: var(--sp-6) 0; padding: var(--sp-5) var(--sp-6); background: var(--sunken);
+  border: 1px solid var(--line); border-radius: var(--r-sm); overflow-x: auto; overflow-y: hidden;
+}
+.ws-body .katex-display > .katex { font-size: 1.06em; }
+
+/* ═══════ pdf ═══════════════════════════════════════════════════════════════
+   Frame and toolbar only. The page-rendering guts are being replaced with a
+   pdf.js canvas and an annotation editor, so nothing here reaches into how a
+   page is painted — .pdf-stack is a plain flow container and .pdf-pagewrap is
+   a neutral sheet that a <canvas> can take over from an <img> unchanged. */
+.pgnum { font-family: var(--font-mono); font-size: var(--t-2xs); font-variant-numeric: tabular-nums; color: var(--ink-2); min-width: 3.5em; text-align: center; }
+.pdf-name {
+  flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: var(--t-2xs); color: var(--ink-3); font-family: var(--font-mono);
+}
+.pdf-body { flex: 1; overflow: auto; padding: var(--sp-5); background: var(--sunken); }
+.pdf-stack { margin: 0 auto; min-width: 200px; display: flex; flex-direction: column; gap: var(--sp-5); }
+.pdf-stack-fit { width: 100%; }
+.pdf-stack-fit > .pdf-pagewrap { margin-left: auto; margin-right: auto; }
+.pdf-pagewrap {
+  position: relative; background: #fff; /* a PDF sheet is paper-white in any theme */
+  border: 1px solid var(--line-strong); border-radius: var(--r-xs); box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+/* real aspect-ratio comes per page from its viewport, inline (was hardcoded A4) */
+.pdf-render { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.pdf-overlay { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; touch-action: none; }
+.pdf-overlay.t-pen, .pdf-overlay.t-arrow, .pdf-overlay.t-highlight { cursor: crosshair; }
+.pdf-overlay.t-text { cursor: text; }
+.pdf-overlay.t-eraser { cursor: cell; }
+
+/* annotation toolbar bits — the pane can be narrow, so the toolbar wraps */
+.pdf-tab .file-toolbar { flex-wrap: wrap; row-gap: var(--sp-2); }
+.tool-gap { width: var(--sp-3); }
+.pdf-save {
+  font-family: var(--font-mono); font-size: var(--t-3xs); color: var(--ink-3);
+  min-width: 4.5em; text-align: center;
+}
+.pdf-save.s-error { color: var(--c-amber-ink); }
+
+/* floating freetext input — blur or Enter commits, Escape cancels */
+.pdf-freetext-input {
+  position: absolute; z-index: 3; min-width: 60px; max-width: 45%;
+  padding: var(--sp-1) var(--sp-2); background: var(--surface);
+  border: 1px solid var(--c-blue); border-radius: var(--r-xs); box-shadow: var(--shadow-2);
+  color: var(--c-blue-ink); font-family: var(--font-sans); line-height: 1.3; outline: none;
+}
+
+/* pdf.js text layer — invisible glyph boxes over the canvas, so text selects */
+.textLayer {
+  position: absolute; inset: 0; overflow: hidden; z-index: 1;
+  line-height: 1; text-size-adjust: none; forced-color-adjust: none; caret-color: transparent;
+}
+.textLayer :is(span, br) {
+  position: absolute; color: transparent; white-space: pre;
+  cursor: text; transform-origin: 0 0;
+}
+.textLayer ::selection { background: color-mix(in srgb, var(--c-blue) 35%, transparent); }
+.pdf-pageno {
+  position: absolute; top: var(--sp-2); right: var(--sp-2);
+  font-family: var(--font-mono); font-size: var(--t-3xs);
+  background: color-mix(in srgb, var(--ink) 72%, transparent); color: var(--bg);
+  border-radius: var(--r-xs); padding: 1px var(--sp-2);
+}
+.pdf-empty {
+  align-items: center; justify-content: center; text-align: center;
+  color: var(--ink-3); display: flex; padding: var(--sp-8);
+  font-size: var(--t-3xs); letter-spacing: .12em; line-height: 2;
+}
+
+/* ═══════ floating timer ═══════ */
+/* Everything inside sizes in em off .float-timer's font-size, so the +/- size
+   control scales the whole widget — face, buttons, grid, hint — in one step. */
+.float-timer {
+  position: fixed; z-index: 300; user-select: none; touch-action: none;
+  font-size: var(--t-md); cursor: grab;
+}
+.float-timer:active { cursor: grabbing; }
+.float-timer.pop .ft-face { animation: ft-pop 700ms var(--motion-ease); }
+.ft-face {
+  position: relative; overflow: hidden;
+  display: inline-flex; align-items: baseline; gap: .45em;
+  font-family: var(--font-mono); font-size: 1em; font-weight: var(--fw-medium);
+  font-variant-numeric: tabular-nums; letter-spacing: .01em;
+  border: 1px solid var(--line-strong); border-radius: var(--r-md); box-shadow: var(--shadow-2);
+  background: var(--surface); color: var(--ink); padding: .45em .7em;
+  transition: border-color var(--motion-base) var(--motion-ease), background var(--motion-base) var(--motion-ease);
+}
+.ft-glyph { font-size: .85em; opacity: .75; }
+.ft-label { font-size: .7em; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
+.ft-time { font-variant-numeric: tabular-nums; }
+/* Time remaining as a rule under the digits — scaleX so it animates cheaply. */
+.ft-bar {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: var(--c-brand); transform-origin: left center;
+  transition: transform 500ms linear;
+}
+.ft-face.low { border-color: var(--c-amber); color: var(--c-amber-ink); }
+.ft-face.low .ft-bar { background: var(--c-amber); }
+.ft-face.up { background: var(--c-red); border-color: var(--c-red); color: #fff; animation: pulse 1.4s infinite; }
+.ft-panel {
+  margin-top: .35em; display: flex; flex-direction: column; gap: .4em; padding: .5em;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: var(--shadow-3);
+}
+.ft-head { display: flex; align-items: center; gap: .25em; }
+.ft-title {
+  flex: 1; font-family: var(--font-mono); font-size: .62em; font-weight: var(--fw-semi);
+  text-transform: uppercase; letter-spacing: .14em; color: var(--ink-3);
+}
+.ft-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .3em; }
+.ft-row { display: flex; gap: .3em; align-items: center; }
+.ft-btn {
+  font-family: var(--font-mono); font-size: .72em; font-weight: var(--fw-medium); line-height: 1;
+  padding: .55em .5em; cursor: pointer; white-space: nowrap;
+  background: var(--sunken); color: var(--ink); border: 1px solid var(--line);
+  border-radius: var(--r-sm); transition: background var(--motion-fast) var(--motion-ease);
+}
+.ft-btn:hover:not(:disabled) { background: var(--raised); }
+.ft-btn:disabled { opacity: .35; cursor: default; }
+.ft-btn.ghost { background: transparent; border-color: transparent; color: var(--ink-3); padding: .4em .45em; }
+.ft-btn.ghost:hover:not(:disabled) { background: var(--sunken); color: var(--ink); }
+.ft-btn.go { background: var(--c-brand); border-color: var(--c-brand); color: #17150f; font-weight: var(--fw-semi); }
+.ft-btn.stop { color: var(--c-red-ink); border-color: var(--line-strong); }
+.ft-input {
+  flex: 1; min-width: 0; width: 100%;
+  font-family: var(--font-mono); font-size: .78em; font-variant-numeric: tabular-nums;
+  padding: .45em .5em; background: var(--sunken); color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+}
+.ft-input.bad { border-color: var(--c-red); color: var(--c-red-ink); }
+.ft-hint { font-family: var(--font-mono); font-size: .6em; color: var(--ink-3); letter-spacing: .02em; }
+@keyframes ft-pop { 0% { transform: scale(1); } 30% { transform: scale(1.14); } 100% { transform: scale(1); } }
+@keyframes pulse { 50% { opacity: .55; } }
+
+/* ═══════ context gauge ═══════ */
+.ctx {
+  font-family: var(--font-mono); font-size: var(--t-2xs); font-variant-numeric: tabular-nums;
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface); padding: var(--sp-1) var(--sp-3); color: var(--ink-3);
+}
+.ctx.hot { border-color: var(--c-amber); color: var(--c-amber-ink); }
+
+/* ═══════ menus + popovers ═══════ */
+.menu-wrap { position: relative; }
+.menu-backdrop { position: fixed; inset: 0; z-index: 90; }
+.menu {
+  position: absolute; top: calc(100% + var(--sp-3)); right: 0; z-index: 95; min-width: 230px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r-md); box-shadow: var(--shadow-3); overflow: hidden;
+  padding: var(--sp-2);
+}
+.menu-item {
+  padding: var(--sp-3) var(--sp-4); cursor: pointer; font-size: var(--t-sm);
+  border-radius: var(--r-sm); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  color: var(--ink-2);
+}
+.menu-item:hover { background: var(--sunken); color: var(--ink); }
+.menu-item.on { background: var(--sunken); color: var(--ink); font-weight: var(--fw-medium); }
+.menu-item .x { float: right; background: none; border: none; font: inherit; cursor: pointer; color: var(--ink-3); padding: 0 var(--sp-1); }
+.menu-item .x:hover { color: var(--c-red-ink); }
+.mi-col {
+  display: inline-block; min-width: 18px; text-align: center; margin-right: var(--sp-3);
+  font-family: var(--font-mono); font-size: var(--t-3xs); color: var(--ink-3);
+  background: var(--sunken); border-radius: var(--r-xs); padding: 0 var(--sp-1);
+}
+.mi-note { color: var(--ink-3); font-size: var(--t-xs); }
+
+.help-backdrop {
+  position: fixed; inset: 0; z-index: 200; background: color-mix(in srgb, var(--ink) 32%, transparent);
+  display: flex; align-items: center; justify-content: center; padding: var(--sp-6);
+}
+.help-card {
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line);
+  border-radius: var(--r-lg); box-shadow: var(--shadow-3);
+  padding: var(--sp-8); max-width: 460px; font-size: var(--t-sm);
+}
+.help-card h3 { font-size: var(--t-md); font-weight: var(--fw-semi); margin-bottom: var(--sp-5); }
+.help-card td { padding: var(--sp-2) var(--sp-5) var(--sp-2) 0; color: var(--ink-2); }
+.help-card td:first-child { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--ink); white-space: nowrap; }
+.help-card p { margin-top: var(--sp-5); color: var(--ink-3); font-size: var(--t-xs); line-height: var(--lh-prose); }
+
+/* ═══════ status line ═══════ */
+.statusline {
+  display: flex; align-items: center; gap: var(--sp-3); flex-wrap: wrap;
+  font-size: var(--t-2xs); font-variant-numeric: tabular-nums; color: var(--ink-2);
+}
+.st-name { display: none; } /* .logo already says MONDAY; kept for narrow shells */
+.st-sep { color: var(--line-strong); }
+.st-chip {
+  border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--ink-2);
+  padding: var(--sp-1) var(--sp-3); font: inherit; white-space: nowrap;
+  font-family: var(--font-mono); font-size: var(--t-2xs);
+}
+.st-chip.hot { border-color: var(--c-amber); color: var(--c-amber-ink); }
+.st-chip.st-down { border-color: var(--c-red); color: var(--c-red-ink); animation: pulse 1.4s infinite; }
+button.st-chip { cursor: pointer; }
+button.st-chip:hover { border-color: var(--ink-3); color: var(--ink); }
+/* The mood chip is the one place mood colour fills a shape in the header —
+   with the derived legible ink, set inline by StatusLine. */
+.st-mood { border: none !important; font-weight: var(--fw-semi); letter-spacing: .04em; }
+.st-clock { color: var(--ink-3); }
+
+/* ── mood popover ────────────────────────────────────────────────────────── */
+.mood-pop { min-width: 300px; max-width: 340px; padding: 0; right: auto; left: 0; }
+.mood-pop-head {
+  display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-5);
+  border-bottom: 1px solid var(--line); font-size: var(--t-sm); font-weight: var(--fw-semi);
+}
+.mood-swatch { width: 10px; height: 10px; border-radius: var(--r-full); flex-shrink: 0; }
+.mood-pop-mode {
+  font-size: var(--t-3xs); font-family: var(--font-mono); color: var(--ink-3);
+  border: 1px solid var(--line); border-radius: var(--r-xs); padding: 0 var(--sp-2);
+}
+.mood-pop-reason { padding: var(--sp-5) var(--sp-5) var(--sp-2); font-size: var(--t-sm); line-height: var(--lh-prose); }
+.mood-pop-manner { padding: 0 var(--sp-5) var(--sp-5); font-size: var(--t-xs); color: var(--ink-3); line-height: var(--lh-ui); }
+.mood-pop-spark { padding: var(--sp-5); border-top: 1px solid var(--line); }
+.mood-pop-label { font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: var(--sp-3); }
+.mood-spark { display: block; }
+.mood-pop-axis { display: flex; justify-content: space-between; font-size: var(--t-3xs); color: var(--ink-3); margin-top: var(--sp-2); }
+.mood-pop-facts {
+  display: flex; gap: var(--sp-5); flex-wrap: wrap; padding: var(--sp-4) var(--sp-5);
+  border-top: 1px solid var(--line); background: var(--sunken);
+  font-size: var(--t-2xs); color: var(--ink-3); font-family: var(--font-mono);
+}
+
+/* ═══════ settings ═══════ */
+.settings-pop { min-width: 320px; max-width: 360px; padding: 0; max-height: 78vh; overflow-y: auto; }
+.set-head {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5); border-bottom: 1px solid var(--line);
+  font-weight: var(--fw-semi); font-size: var(--t-sm); color: var(--ink);
+}
+/* The ▾ beside SETTINGS. Square, so it reads as an attachment to the button
+   before it rather than a control in its own right. */
+.btn.tiny.caret { padding: var(--sp-2) var(--sp-3); color: var(--ink-2); }
+.set-group { border-bottom: 1px solid var(--line); padding: var(--sp-4) 0 var(--sp-5); }
+.set-group:last-of-type { border-bottom: none; }
+.set-title {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-3); padding: 0 var(--sp-5) var(--sp-3);
+}
+.set-sub { border-top: 1px solid var(--line); margin-top: var(--sp-3); padding-top: var(--sp-3); }
+.sw-row { display: flex; align-items: flex-start; gap: var(--sp-4); padding: var(--sp-3) var(--sp-5); cursor: pointer; }
+.sw-row:hover { background: var(--sunken); }
+.sw-row.off { opacity: .4; cursor: default; }
+.sw {
+  flex-shrink: 0; width: 30px; height: 18px; margin-top: 1px;
+  border: 1px solid var(--line-strong); border-radius: var(--r-full);
+  background: var(--sunken); display: block; position: relative;
+  transition: background var(--motion-base) var(--motion-ease), border-color var(--motion-base) var(--motion-ease);
+}
+.sw-knob {
+  position: absolute; top: 2px; left: 2px; width: 12px; height: 12px;
+  background: var(--ink-3); border-radius: var(--r-full);
+  transition: left var(--motion-base) var(--motion-ease), background var(--motion-base) var(--motion-ease);
+}
+.sw.on { background: var(--c-green); border-color: var(--c-green); }
+.sw.on .sw-knob { left: 14px; background: #fff; }
+.sw-body { display: flex; flex-direction: column; min-width: 0; gap: 1px; /* hairline, not a space step */ }
+.sw-label { font-size: var(--t-sm); font-weight: var(--fw-medium); }
+.sw-hint { font-size: var(--t-xs); color: var(--ink-3); line-height: var(--lh-ui); }
+.set-vol { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-3) var(--sp-5) 0; }
+.set-vol-label { font-size: var(--t-2xs); color: var(--ink-3); }
+.set-vol input[type='range'] { flex: 1; accent-color: var(--c-blue); height: 18px; }
+.set-vol-num { font-family: var(--font-mono); font-size: var(--t-2xs); font-variant-numeric: tabular-nums; min-width: 34px; text-align: right; color: var(--ink-2); }
+.set-foot { padding: var(--sp-4) var(--sp-5); font-size: var(--t-xs); color: var(--ink-3); line-height: var(--lh-ui); border-top: 1px solid var(--line); }
+.btn.tiny.spk { font-size: var(--t-sm); padding: var(--sp-2) var(--sp-4); }
+.btn.tiny.spk.on { background: var(--surface); border-color: var(--c-green); color: var(--c-green-ink); }
+
+/* ═══════ mode selector ═══════ */
+/* Each mode owns a hue from the token file. The button is an outline + a dot,
+   not a slab of colour — five saturated buttons in a header was noise. */
+.mode-btn { min-width: 104px; display: inline-flex; align-items: center; gap: var(--sp-3); }
+.mode-btn::before {
+  content: ''; width: 7px; height: 7px; border-radius: var(--r-full);
+  background: var(--mode-drill); flex-shrink: 0;
+}
+.mode-btn.m-drill::before { background: var(--mode-drill); }
+.mode-btn.m-exam::before { background: var(--mode-exam); }
+.mode-btn.m-postmortem::before { background: var(--mode-postmortem); }
+.mode-btn.m-teach::before { background: var(--mode-teach); }
+.mode-btn.m-pause::before { background: var(--mode-pause); }
+.mode-btn.m-exam { border-color: var(--c-red); color: var(--c-red-ink); font-weight: var(--fw-semi); }
+.mode-btn.m-pause { border-color: var(--c-amber); color: var(--c-amber-ink); }
+.mode-menu { min-width: 280px; }
+.mode-menu .menu-item { white-space: normal; padding: var(--sp-4) var(--sp-5); }
+.mode-menu .menu-item b { font-size: var(--t-sm); font-weight: var(--fw-semi); }
+.mode-hint { font-size: var(--t-xs); font-weight: var(--fw-normal); color: var(--ink-3); margin-top: 2px; }
+
+/* ═══════ EXAM ═══════════════════════════════════════════════════════════════
+   The intent is right: you must not be able to be in EXAM mode without knowing
+   it. The old execution shouted — repainted accent, diagonal hazard stripes,
+   red borders on every column, a 6px frame. This does the opposite and is more
+   convincing for it: under exam conditions the room goes COLD AND QUIET.
+   The brand gold is withdrawn entirely, surfaces desaturate, the transcript's
+   furniture recedes, and one red band states the rules. */
+:root[data-mode='EXAM'] {
+  --c-brand: var(--c-slate);
+  --surface: color-mix(in srgb, var(--bg) 82%, var(--c-slate) 18%);
+  --sunken: color-mix(in srgb, var(--bg) 74%, var(--c-slate) 26%);
+}
+:root[data-mode='EXAM'] .tab.active::after { background: var(--c-red); }
+:root[data-mode='EXAM'] .col { border-color: color-mix(in srgb, var(--line) 60%, var(--c-red) 40%); }
+.exam-band {
+  display: flex; align-items: center; gap: var(--sp-5); padding: var(--sp-3) var(--sp-6);
+  background: var(--c-red); color: #fff;
+  font-size: var(--t-2xs); letter-spacing: .04em; flex-shrink: 0;
+}
+.exam-band-tag {
+  background: rgba(0,0,0,.28); border-radius: var(--r-xs);
+  padding: var(--sp-1) var(--sp-4); letter-spacing: .16em; font-weight: var(--fw-bold);
+}
+.exam-band-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; opacity: .95; }
+/* A 2px inset ring, not a 6px slab. Present, not screaming. */
+.exam-frame {
+  position: fixed; inset: 0; z-index: 400; pointer-events: none;
+  box-shadow: inset 0 0 0 2px var(--c-red);
+}
+.chat-tab.exam .turn.assistant .turn-tag::after { background: var(--c-red) !important; }
+.chat-tab.exam .quick-row .btn.tiny { opacity: .45; }
+.chat-tab.exam .quick-row .btn.tiny:hover { opacity: 1; }
+.chat-tab.exam .chat-input textarea { border-color: var(--c-red); }
+
+/* ═══════ PAUSE ═══════ */
+.pause-band {
+  display: flex; align-items: center; gap: var(--sp-5); padding: var(--sp-3) var(--sp-6);
+  background: color-mix(in srgb, var(--c-amber) 18%, var(--surface));
+  border-bottom: 1px solid var(--c-amber);
+  color: var(--c-amber-ink); font-size: var(--t-2xs); flex-shrink: 0;
+}
+.pause-band-tag {
+  background: var(--c-amber); color: #17150f; border-radius: var(--r-xs);
+  padding: var(--sp-1) var(--sp-4); letter-spacing: .16em; font-weight: var(--fw-bold);
+}
+.pause-band .exam-band-text { color: var(--c-amber-ink); }
+
+/* ═══════ readiness ═══════ */
+.rd-tab, .bk-tab, .sched-tab { display: flex; flex-direction: column; min-height: 0; }
+.rd-bar, .bk-bar, .sched-bar {
+  display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid var(--line); flex-wrap: wrap; flex-shrink: 0;
+}
+.rd-title, .bk-title, .sched-title {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-3); margin-right: var(--sp-2);
+}
+.rd-count {
+  font-family: var(--font-mono); font-size: var(--t-2xs);
+  border: 1px solid var(--line); border-radius: var(--r-sm); padding: var(--sp-1) var(--sp-3); color: var(--ink-2);
+}
+.rd-count.hot { border-color: var(--c-red); color: var(--c-red-ink); }
+.rd-top {
+  display: flex; gap: var(--sp-6); align-items: stretch; padding: var(--sp-6) var(--sp-5);
+  border-bottom: 1px solid var(--line); background: var(--sunken);
+}
+/* The headline number. Reads as a figure, not a warning label. */
+.rd-big {
+  border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface);
+  padding: var(--sp-5) var(--sp-6); text-align: center; flex-shrink: 0; box-shadow: var(--shadow-1);
+}
+.rd-big-num { font-size: var(--t-2xl); font-weight: var(--fw-semi); line-height: 1; font-variant-numeric: tabular-nums; }
+.rd-big-den { font-size: var(--t-sm); color: var(--ink-3); }
+.rd-big-label { font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin-top: var(--sp-3); }
+.rd-proj { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: var(--sp-3); }
+.rd-proj-head { display: flex; align-items: baseline; gap: var(--sp-4); font-size: var(--t-2xs); color: var(--ink-3); }
+.rd-proj-head b { font-size: var(--t-lg); font-weight: var(--fw-semi); font-variant-numeric: tabular-nums; color: var(--ink); }
+.rd-proj-head b.ok { color: var(--c-green-ink); }
+.rd-proj-head b.bad { color: var(--c-red-ink); }
+.rd-proj-target { margin-left: auto; }
+.rd-scale { position: relative; height: 8px; border-radius: var(--r-full); background: var(--raised); overflow: hidden; }
+.rd-scale-fill { position: absolute; inset: 0 auto 0 0; background: var(--c-green); border-radius: var(--r-full); }
+.rd-scale-fill.bad { background: var(--c-red); }
+.rd-scale-target { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); border-radius: var(--r-full); }
+.rd-proj-note { font-size: var(--t-xs); color: var(--ink-3); }
+.rd-body, .bk-body, .sched-body { flex: 1; overflow-y: auto; padding: var(--sp-5); min-height: 0; }
+.rd-row { margin-bottom: var(--sp-5); }
+.rd-row-head { display: flex; align-items: baseline; gap: var(--sp-4); font-size: var(--t-xs); margin-bottom: var(--sp-2); }
+.rd-topic { font-weight: var(--fw-medium); color: var(--ink); text-transform: capitalize; }
+.rd-meta { font-size: var(--t-3xs); color: var(--ink-3); white-space: nowrap; font-family: var(--font-mono); }
+.rd-meta.stale { color: var(--c-amber-ink); }
+.rd-score { font-family: var(--font-mono); font-weight: var(--fw-semi); font-size: var(--t-xs); font-variant-numeric: tabular-nums; min-width: 28px; text-align: right; margin-left: auto; }
+.rd-score.good { color: var(--c-green-ink); }
+.rd-score.bad { color: var(--c-red-ink); }
+/* Readiness bars: a four-stop scale, so a glance down the column sorts itself. */
+.rd-track { position: relative; height: 8px; border-radius: var(--r-full); background: var(--raised); overflow: hidden; }
+.rd-fill { position: absolute; top: 0; left: 0; bottom: 0; background: var(--c-slate); border-radius: var(--r-full); }
+.rd-fill.good { background: var(--c-green); }
+.rd-fill.mid { background: var(--c-blue); }
+.rd-fill.low { background: var(--c-amber); }
+.rd-fill.bad { background: var(--c-red); }
+.rd-cov { position: absolute; left: 0; bottom: 0; height: 2px; background: var(--ink); opacity: .35; }
+.rd-empty, .bk-empty, .sched-empty, .sched-help {
+  color: var(--ink-3); padding: var(--sp-7) var(--sp-5); font-size: var(--t-sm); line-height: var(--lh-prose);
+}
+.rd-err { font-size: var(--t-2xs); color: var(--ink-3); padding: var(--sp-3) var(--sp-5); border-bottom: 1px solid var(--line); }
+.rd-foot, .bk-foot {
+  border-top: 1px solid var(--line); padding: var(--sp-4) var(--sp-5);
+  font-size: var(--t-xs); color: var(--ink-3); line-height: var(--lh-ui); flex-shrink: 0;
+}
+
+/* ═══════ backlog ═══════ */
+.bk-sep { width: 1px; height: 16px; background: var(--line); margin: 0 var(--sp-2); }
+.bk-stats { display: flex; gap: var(--sp-3); padding: var(--sp-4) var(--sp-5); flex-wrap: wrap;
+  border-bottom: 1px solid var(--line); background: var(--sunken); }
+.bk-pill {
+  font-family: var(--font-mono); font-size: var(--t-2xs); padding: var(--sp-1) var(--sp-3);
+  border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--ink-2);
+}
+.bk-pill.hot { border-color: var(--c-amber); color: var(--c-amber-ink); }
+.bk-pill.late { border-color: var(--c-red); color: var(--c-red-ink); }
+.bk-pill.ok { border-color: var(--c-green); color: var(--c-green-ink); }
+.bk-pill.dim { color: var(--ink-3); }
+.bk-item {
+  border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface);
+  padding: var(--sp-5); margin-bottom: var(--sp-5); box-shadow: var(--shadow-1);
+}
+.bk-item.overdue { border-left: 2px solid var(--c-red); }
+.bk-item.done { opacity: .55; box-shadow: none; }
+.bk-head { display: flex; align-items: center; gap: var(--sp-3); flex-wrap: wrap; font-size: var(--t-xs); }
+/* Exam-board badges: one hue each, so TMUA / MAT / STEP sort at a glance. */
+.bk-exam {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .06em;
+  padding: 1px var(--sp-3); border-radius: var(--r-xs); border: 1px solid transparent;
+}
+.x-tmua { background: color-mix(in srgb, var(--c-brand) 18%, transparent); color: var(--c-brand-ink); border-color: color-mix(in srgb, var(--c-brand) 40%, transparent); }
+.x-mat { background: color-mix(in srgb, var(--c-violet) 15%, transparent); color: var(--c-violet-ink); border-color: color-mix(in srgb, var(--c-violet) 38%, transparent); }
+.x-step { background: color-mix(in srgb, var(--c-green) 15%, transparent); color: var(--c-green-ink); border-color: color-mix(in srgb, var(--c-green) 38%, transparent); }
+.x-other { background: var(--sunken); color: var(--ink-3); border-color: var(--line); }
+.bk-ref { font-family: var(--font-mono); font-weight: var(--fw-semi); color: var(--ink); }
+.bk-topic { color: var(--ink-3); text-transform: capitalize; }
+.bk-bucket { font-size: var(--t-3xs); color: var(--ink-3); border: 1px solid var(--line); border-radius: var(--r-xs); padding: 0 var(--sp-2); }
+.bk-tier { font-family: var(--font-mono); font-size: var(--t-3xs); border: 1px solid var(--line); border-radius: var(--r-xs); padding: 0 var(--sp-2); color: var(--ink-2); }
+.bk-due { font-size: var(--t-3xs); color: var(--ink-3); font-family: var(--font-mono); }
+.bk-due.late { color: var(--c-red-ink); }
+/* Elapsed against budget. Neutral while it is under: being on pace is the baseline,
+   not an achievement, and colouring it green would make every card shout. */
+.bk-pace { font-family: var(--font-mono); font-size: var(--t-3xs); color: var(--ink-3); }
+.bk-pace.over { color: var(--c-amber-ink); }
+.bk-detail { font-size: var(--t-sm); margin-top: var(--sp-3); line-height: var(--lh-ui); color: var(--ink-2); }
+.bk-fix { font-size: var(--t-xs); color: var(--c-green-ink); margin-top: var(--sp-2); }
+.bk-hist { display: flex; gap: var(--sp-3); flex-wrap: wrap; margin-top: var(--sp-3); font-size: var(--t-3xs); color: var(--ink-3); font-family: var(--font-mono); }
+.h-fail { color: var(--c-red-ink); }
+.bk-hist em { font-style: normal; color: var(--ink-3); }
+.bk-hist em.h-over { color: var(--c-amber-ink); }
+.bk-acts { display: flex; gap: var(--sp-3); margin-top: var(--sp-4); }
+/* Undo is a correction, not an action you should be drawn to — outlined, not filled. */
+.btn.tiny.undo { color: var(--c-amber-ink); border-color: var(--c-amber); background: transparent; }
+.bk-count { font-family: var(--font-mono); font-size: var(--t-2xs); color: var(--ink-3); }
+/* The one badge allowed to be loud: work that is actually overdue. */
+.bk-badge {
+  background: var(--c-red) !important; border-color: var(--c-red) !important;
+  color: #fff !important; font-weight: var(--fw-medium);
+}
+
+/* The due badge opens a breakdown of what the number is actually made of. Anchored to the
+   badge, not the header, so it stays put when the cost readout beside it changes width. */
+.bk-badge-wrap { position: relative; display: inline-block; }
+.bk-badge.on { outline: 2px solid var(--c-red); outline-offset: 2px; }
+.bk-pop {
+  position: absolute; top: calc(100% + 6px); right: 0; z-index: 60;
+  min-width: 230px; max-width: 300px;
+  background: var(--surface); border: 1px solid var(--line-strong);
+  border-radius: var(--r-sm); box-shadow: var(--shadow-3);
+  padding: var(--sp-2) 0;
+}
+.bk-pop-head {
+  display: flex; align-items: baseline; gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3) var(--sp-2);
+  border-bottom: 1px solid var(--line); margin-bottom: var(--sp-2);
+  font-size: var(--t-xs);
+}
+.bk-pop-late { font-family: var(--font-mono); font-size: var(--t-2xs); color: var(--c-red); }
+.bk-pop-label {
+  padding: var(--sp-2) var(--sp-3) var(--sp-1);
+  font-size: var(--t-3xs); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3);
+}
+.bk-pop-row {
+  display: flex; align-items: baseline; gap: var(--sp-2); width: 100%;
+  padding: var(--sp-2) var(--sp-3); border: 0; background: transparent; cursor: pointer;
+  font-family: inherit; font-size: var(--t-xs); color: var(--ink); text-align: left;
+}
+.bk-pop-row:hover { background: var(--sunken); }
+.bk-pop-name { flex: 1; }
+.bk-pop-n { font-family: var(--font-mono); font-weight: var(--fw-semi); }
+.bk-pop-sub { font-family: var(--font-mono); font-size: var(--t-3xs); color: var(--ink-3); }
+.bk-pop-empty { padding: var(--sp-2) var(--sp-3); font-size: var(--t-xs); color: var(--ink-3); }
+.bk-pop-foot { border-top: 1px solid var(--line); margin-top: var(--sp-2); padding-top: var(--sp-2); }
+
+/* The backlog filter bar. Eight menus where there were eighteen toggle buttons wrapping
+   onto three lines: a menu states its dimension even when it is not set, and says how many
+   rows each choice would leave. */
+.bk-pick {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  padding: 0 var(--sp-2) 0 var(--sp-3);
+  border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+  background: var(--surface); height: 26px;
+}
+.bk-pick:hover { border-color: var(--ink-3); }
+/* A set filter is the one thing on this bar that should catch the eye. */
+.bk-pick.on { border-color: var(--c-blue); box-shadow: inset 2px 0 0 var(--c-blue); }
+.bk-pick-label {
+  font-size: var(--t-3xs); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-3); white-space: nowrap;
+}
+.bk-pick.on .bk-pick-label { color: var(--c-blue-ink); }
+.bk-pick select {
+  font: inherit; font-size: var(--t-xs); color: var(--ink);
+  background: transparent; border: 0; padding: 0 var(--sp-1); max-width: 190px;
+  cursor: pointer; appearance: none; -webkit-appearance: none;
+}
+.bk-pick select:focus { outline: none; }
+.bk-pick:focus-within { outline: 2px solid var(--c-blue); outline-offset: 2px; }
+.bk-pick-hint {
+  font-size: var(--t-3xs); color: var(--ink-3); white-space: nowrap; padding-right: var(--sp-2);
+}
+.btn.tiny.warn { border-color: var(--c-amber); color: var(--c-amber-ink); }
+
+/* ═══════ schedule ═══════ */
+.sched-day { margin-bottom: var(--sp-6); }
+.sched-dayhead {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-3); border-bottom: 1px solid var(--line); padding-bottom: var(--sp-2); margin-bottom: var(--sp-4);
+}
+.sched-ev { display: flex; gap: var(--sp-5); align-items: baseline; padding: var(--sp-3) 0; border-bottom: 1px solid var(--line); }
+.sched-ev:last-child { border-bottom: none; }
+.sched-ev.allday .sched-time { color: var(--c-violet-ink); }
+.sched-time { flex: 0 0 8.5em; font-family: var(--font-mono); font-size: var(--t-2xs); white-space: nowrap; color: var(--ink-2); }
+.sched-name { flex: 1; font-size: var(--t-sm); }
+.sched-loc { font-size: var(--t-2xs); color: var(--ink-3); white-space: nowrap; }
+.sched-setup { display: flex; flex-direction: column; gap: var(--sp-4); max-width: 460px; }
+.sched-input {
+  font: inherit; font-size: var(--t-sm); padding: var(--sp-4); color: var(--ink);
+  background: var(--surface); border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+}
+.sched-input:focus { outline: none; border-color: var(--c-blue); }
+.sched-err { color: var(--c-red-ink); font-size: var(--t-xs); margin-top: var(--sp-2); }
+.btn.tiny.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+
+/* ═══════ ⌘T launcher ═══════ */
+.launcher-back {
+  position: fixed; inset: 0; z-index: 60; display: flex; justify-content: center;
+  align-items: flex-start; padding-top: 12vh;
+  background: color-mix(in srgb, var(--ink) 30%, transparent);
+}
+.launcher {
+  width: min(620px, 92vw); background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-3);
+  display: flex; flex-direction: column; max-height: 68vh; overflow: hidden;
+}
+.launcher-input {
+  font: inherit; font-size: var(--t-md); color: var(--ink); background: transparent;
+  border: none; border-bottom: 1px solid var(--line); padding: var(--sp-6) var(--sp-7); outline: none;
+}
+.launcher-input::placeholder { color: var(--ink-3); }
+.launcher-list { overflow-y: auto; padding: var(--sp-3); }
+.launcher-group {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-3); padding: var(--sp-5) var(--sp-5) var(--sp-2);
+}
+.launcher-row {
+  display: flex; align-items: baseline; gap: var(--sp-5); padding: var(--sp-3) var(--sp-5);
+  cursor: pointer; border-radius: var(--r-sm);
+}
+.launcher-row.on { background: var(--sunken); }
+.launcher-label { font-weight: var(--fw-medium); white-space: nowrap; }
+.launcher-hint {
+  font-size: var(--t-xs); color: var(--ink-3); overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; direction: rtl; text-align: left; font-family: var(--font-mono);
+}
+.launcher-empty { padding: var(--sp-7); color: var(--ink-3); }
+.launcher-foot {
+  border-top: 1px solid var(--line); padding: var(--sp-4) var(--sp-7);
+  font-size: var(--t-2xs); color: var(--ink-3);
+}
+
+/* ═══════ paper intake ═══════ */
+/* Filing + classification take minutes, so the status stays visible rather than
+   the app appearing to do nothing. */
+.paper-bar {
+  position: fixed; left: var(--sp-6); bottom: var(--sp-6); z-index: 60;
+  display: flex; align-items: center; gap: var(--sp-5);
+  max-width: min(680px, calc(100vw - 48px));
+  padding: var(--sp-4) var(--sp-6); background: var(--surface);
+  border: 1px solid var(--line); border-left: 2px solid var(--c-blue);
+  border-radius: var(--r-md); box-shadow: var(--shadow-3);
+  font-size: var(--t-sm);
+}
+.paper-bar b { white-space: nowrap; font-weight: var(--fw-semi); }
+.paper-bar .paper-msg { color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.paper-bar.ok { border-left-color: var(--c-green); }
+.paper-bar.bad { border-left-color: var(--c-red); }
+
+/* ═══════ the orb ═══════ */
+.monday-orb { display: block; flex-shrink: 0; image-rendering: auto; }
+
+/* ═══════ scrollbars ═══════ */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: var(--r-full); border: 3px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-3); background-clip: content-box; }
+::-webkit-scrollbar-track { background: transparent; }
+* { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+
+/* ═══════ LaTeX verification fixture ═══════ */
+/* Dev only, reached with ?latex=1. Renders the maths cases through the real
+   markdown pipeline so KaTeX regressions are catchable without hand-testing. */
+.latex-check { padding: var(--sp-8); overflow: auto; }
+.latex-check h2 { font-size: var(--t-lg); font-weight: var(--fw-semi); margin-bottom: var(--sp-6); }
+.latex-case { border-top: 1px solid var(--line); padding: var(--sp-5) 0; }
+.latex-case > .eyebrow { margin-bottom: var(--sp-3); display: block; }
+.latex-narrow { max-width: 260px; border: 1px dashed var(--c-blue); padding: var(--sp-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* backlog per-question notes */
+.bk-notes { margin-top: var(--sp-3); padding-top: var(--sp-3); border-top: 1px dashed var(--line); }
+.bk-note-monday { font-size: var(--t-xs); background: var(--c-violet-soft); border-radius: var(--r-sm);
+  padding: var(--sp-3) var(--sp-4); margin-bottom: var(--sp-3); color: var(--ink); }
+.bk-note-input { width: 100%; box-sizing: border-box; resize: vertical; font: inherit;
+  font-size: var(--t-sm); padding: var(--sp-3) var(--sp-4); border: 1px solid var(--line); border-radius: var(--r-sm);
+  background: var(--surface); color: var(--ink); }
+.bk-note-status { font-size: var(--t-2xs); color: var(--ink-3); float: right; margin-top: var(--sp-1); }
+
+/* backlog: workbook takeaways + per-question insight */
+.bk-takeaways { display: flex; flex-wrap: wrap; gap: var(--sp-3); align-items: center;
+  padding: var(--sp-3) var(--sp-5); margin: 0 0 var(--sp-3); }
+.bk-take-label { font-size: var(--t-2xs); font-weight: var(--fw-bold); letter-spacing: .04em;
+  text-transform: uppercase; color: var(--ink-3); }
+.bk-take { font-size: var(--t-xs); padding: var(--sp-1) var(--sp-4); border-radius: var(--r-full);
+  background: var(--c-violet-soft); color: var(--ink); }
+.bk-insight { margin-top: var(--sp-3); padding: var(--sp-3) var(--sp-4); border-left: 3px solid var(--c-violet);
+  background: var(--sunken); border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+.bk-desc { font-size: var(--t-sm); color: var(--ink); margin-bottom: var(--sp-3); }
+.bk-chips { display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+.bk-chip { font-size: var(--t-2xs); padding: var(--sp-1) 7px; border-radius: var(--r-full);
+  background: var(--raised); color: var(--ink); }
+.bk-chip.tech { background: #e3ecff; color: #244a9e; }
+.bk-chip.trap { background: #ffe6e0; color: #9e3320; }
+.bk-chip.diff { background: #ece0ff; color: #5b2a9e; font-weight: var(--fw-semi); }
+.bk-xlinks { font-size: var(--t-2xs); color: var(--ink-3); margin-top: var(--sp-3); }
+
+/* backlog driven session */
+.bk-session { display: flex; flex-direction: column; height: 100%; gap: var(--sp-5); padding: var(--sp-5); }
+.bk-sess-top { display: flex; align-items: center; gap: var(--sp-5); }
+.bk-sess-prog { font-size: var(--t-sm); color: var(--ink-3); font-weight: var(--fw-semi); }
+.bk-sess-timer { font-size: 20px; font-weight: var(--fw-bold); font-variant-numeric: tabular-nums;
+  color: var(--c-violet); }
+/* Same escalation as the float timer: amber inside the last 30 seconds, red once the
+   budget is spent. Past zero it keeps counting up, so the overrun is what pulses. */
+.bk-sess-timer.low { color: var(--c-amber-ink); }
+.bk-sess-timer.up { color: var(--c-red-ink); animation: pulse 1.4s infinite; }
+.bk-sess-budget { font-family: var(--font-mono); font-size: var(--t-2xs); color: var(--ink-3); }
+.bk-sess-card { flex: 1; display: flex; flex-direction: column; gap: var(--sp-4); overflow-y: auto;
+  padding: var(--sp-6); border: 1px solid var(--line); border-radius: var(--r-md);
+  background: var(--surface); }
+.bk-sess-ref { font-size: var(--t-xl); }
+.bk-sess-topic { font-size: var(--t-sm); color: var(--ink-3); text-transform: capitalize; }
+.bk-sess-nopdf { font-size: var(--t-xs); color: var(--ink-3); font-style: italic; }
+.bk-sess-acts { display: flex; gap: var(--sp-5); }
+.bk-sess-acts .btn { flex: 1; padding: var(--sp-5); font-size: 15px; }
+.btn.reveal { align-self: flex-start; opacity: .85; }
+
+/* health strip — live / voice / board dots */
+.health-strip { display: inline-flex; gap: var(--sp-2); align-items: center; margin-left: 4px; }
+.hs-dot { font-size: 10px; line-height: 1; padding: 3px var(--sp-3); border-radius: var(--r-full);
+  font-weight: var(--fw-semi); letter-spacing: .02em; text-transform: uppercase;
+  border: 1px solid transparent; cursor: default; user-select: none; }
+.hs-dot.ok   { background: #e6f7ec; color: #1a7f43; border-color: #bfe6cd; }
+.hs-dot.warn { background: #fff5e0; color: #9a6b00; border-color: #f0dca8; }
+.hs-dot.bad  { background: #ffe6e0; color: #a3301b; border-color: #f2c2b7; }
+:root[data-theme="dark"] .hs-dot.ok   { background: #10331f; color: #6fe0a0; border-color: #1c5836; }
+:root[data-theme="dark"] .hs-dot.warn { background: #33280d; color: #e6b64d; border-color: #5a481a; }
+:root[data-theme="dark"] .hs-dot.bad  { background: #3a1913; color: #f0a08d; border-color: #63291d; }
+
+/* recommend panel — weak topics -> drills + video */
+.rec-panel { margin: 0 0 var(--sp-4); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+.rec-head { width: 100%; text-align: left; padding: var(--sp-4) var(--sp-5); font-size: var(--t-sm); font-weight: var(--fw-semi);
+  background: var(--sunken); border: none; cursor: pointer; color: var(--ink); }
+.rec-body { padding: var(--sp-4) var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-5); }
+.rec-topic-head { display: flex; justify-content: space-between; align-items: baseline; text-transform: capitalize; }
+.rec-acc { font-size: var(--t-xs); color: var(--ink-3); }
+.rec-drills { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-2); }
+.rec-chip { font-size: var(--t-2xs); padding: 3px var(--sp-4); border-radius: var(--r-sm); cursor: pointer;
+  background: #e3ecff; color: #244a9e; border: 1px solid #c5d6f5; }
+.rec-chip:disabled { opacity: .5; cursor: default; }
+.rec-vids { margin-top: var(--sp-3); display: flex; flex-wrap: wrap; gap: var(--sp-3); }
+.rec-vid { font-size: var(--t-xs); padding: 3px var(--sp-4); border-radius: var(--r-sm); cursor: pointer;
+  background: #ffe6e0; color: #a3301b; border: 1px solid #f2c2b7; }
+
+
+/* audio blocked — tap to enable voice */
+.audio-unblock { font-size: var(--t-xs); padding: 3px 9px; border-radius: var(--r-full); cursor: pointer;
+  background: #fff5e0; color: #9a6b00; border: 1px solid #f0dca8; animation: audiopulse 1.6s ease-in-out infinite; }
+@keyframes audiopulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+
+.hs-dot.click { cursor: pointer; } .hs-dot.click:hover { filter: brightness(0.95); }
+/* ── backlog: collapsible bands, per-item openers, markdown notes ─────────── */
+.bk-band-toggle {
+  display: block; width: 100%; text-align: left; background: none; border: 0;
+  border-bottom: 1px solid var(--line); padding: var(--sp-3) var(--sp-5); cursor: pointer;
+  font: inherit; font-size: var(--t-xs); color: var(--ink-3); letter-spacing: .02em;
+}
+.bk-band-toggle:hover { background: var(--sunken); color: var(--ink); }
+.bk-open { display: flex; gap: var(--sp-3); flex-wrap: wrap; padding: var(--sp-2) var(--sp-5) var(--sp-1); }
+.bk-note-md {
+  border: 1px solid var(--line); background: var(--surface); padding: var(--sp-3) var(--sp-4);
+  cursor: text; min-height: 2.4em; font-size: var(--t-sm);
+}
+.bk-note-md:hover { border-color: var(--c-brand); }
+.bk-note-md > :last-child { margin-bottom: 0; }
+.bk-note-input { resize: vertical; }
+.bk-note-status { display: flex; align-items: center; gap: var(--sp-2); }
+
+/* ── PDF page-preview rail ────────────────────────────────────────────────── */
+/* Its own scroller beside the paper: a map of the document, not part of it. */
+.pdf-main { flex: 1; display: flex; min-height: 0; }
+.pdf-scrollhost { flex: 1; min-width: 0; position: relative; display: flex; }
+.pdf-scrollhost > .pdf-body { flex: 1; min-width: 0; }
+/* The reader draws its own scrollbar (see PdfScrollbar) because the platform one jumps to
+   the spot that is clicked, and a trackpad tap counts as that click. Hidden here only. */
+.pdf-body { scrollbar-width: none; }
+.pdf-body::-webkit-scrollbar { width: 0; height: 0; }
+.pdf-sbar {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 14px; z-index: 4;
+  background: transparent; cursor: default;
+  /* Only the thumb is interactive: the track lies over the right edge of the paper, and a
+     pen stroke there must reach the page, not the scrollbar. */
+  pointer-events: none;
+}
+.pdf-sbar.idle { display: none; }
+.pdf-sbar-thumb {
+  position: absolute; top: 0; right: 3px; width: 8px; border-radius: var(--r-full);
+  background: var(--line-strong); cursor: grab; touch-action: none; pointer-events: auto;
+}
+.pdf-sbar:hover .pdf-sbar-thumb { background: var(--ink-3); }
+.pdf-sbar-thumb:active { cursor: grabbing; background: var(--ink-2); }
+.pdf-thumbs {
+  flex: 0 0 auto; width: 164px; overflow-y: auto; overflow-x: hidden;
+  border-left: 1px solid var(--line); background: var(--sunken);
+  padding: var(--sp-3); display: flex; flex-direction: column; gap: var(--sp-3);
+}
+.pdf-thumb {
+  display: flex; flex-direction: column; align-items: center; gap: var(--sp-1);
+  background: none; border: 0; padding: 0; cursor: pointer; font: inherit;
+}
+.pdf-thumb-hold {
+  display: block; width: 132px; background: #fff;
+  border: 1px solid var(--line); box-shadow: var(--shadow-1);
+}
+.pdf-thumb-hold canvas { display: block; width: 100%; height: 100%; }
+.pdf-thumb.on .pdf-thumb-hold { border-color: var(--c-brand); box-shadow: 0 0 0 2px var(--c-brand); }
+.pdf-thumb:hover .pdf-thumb-hold { border-color: var(--c-brand); }
+.pdf-thumb-n { font-size: var(--t-xs); color: var(--ink-3); }
+.pdf-thumb.on .pdf-thumb-n { color: var(--ink); font-weight: var(--fw-semi); }
+
+/* A 14" laptop has roughly half the vertical room of the 27" monitor, and the header is
+   the only chrome that grows when it wraps. Tighten it there so the panes keep the space
+   rather than the frame. */
+@media (max-height: 1000px), (max-width: 1600px) {
+  header { padding: var(--sp-3) var(--sp-4); gap: var(--sp-3); }
+  .cols { padding: var(--sp-3); }
+}
+
+/* ═══════ settings pane ═══════════════════════════════════════════════════
+   Built on the shared pane chrome (.tab-fill + .pane-toolbar + .pane-body), so
+   it inherits the house frame and only the settings-specific pieces are
+   defined here. Two typographic jobs, and only two: the control label in --ink,
+   and the one line explaining it in --ink-3. Anything that needs a third weight
+   is a section heading.
+   ═══════════════════════════════════════════════════════════════════════════ */
+.sp-tab { display: flex; flex-direction: column; min-height: 0; }
+.sp-bar { gap: var(--sp-4); flex-wrap: wrap; }
+.sp-title {
+  font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.sp-jump { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; min-width: 0; }
+.sp-jump-link {
+  font-size: var(--t-2xs); color: var(--ink-3); text-decoration: none;
+  border-bottom: 1px solid transparent; white-space: nowrap;
+  transition: color var(--motion-fast) var(--motion-ease), border-color var(--motion-fast) var(--motion-ease);
+}
+.sp-jump-link:hover { color: var(--ink); border-bottom-color: var(--line-strong); }
+.sp-body { padding: 0; }
+
+/* A result strip, not a toast: it stays until it is superseded or times out,
+   and it never covers anything. */
+.sp-note {
+  padding: var(--sp-4) var(--sp-6); background: var(--sunken);
+  border-bottom: 1px solid var(--line); font-size: var(--t-xs); color: var(--ink-2);
+  line-height: var(--lh-ui);
+}
+.sp-lock {
+  padding: var(--sp-4) var(--sp-6); border-bottom: 1px solid var(--c-red);
+  background: var(--sunken); color: var(--c-red-ink);
+  font-size: var(--t-xs); line-height: var(--lh-ui);
+}
+
+.sp-section { border-bottom: 1px solid var(--line); padding: var(--sp-7) var(--sp-6) var(--sp-8); scroll-margin-top: var(--sp-5); }
+.sp-section:last-of-type { border-bottom: none; }
+.sp-section-head { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; }
+.sp-section-title { font-size: var(--t-md); font-weight: var(--fw-semi); letter-spacing: -.01em; }
+.sp-section-blurb {
+  margin-top: var(--sp-3); max-width: var(--layout-measure);
+  font-size: var(--t-xs); color: var(--ink-3); line-height: var(--lh-prose);
+}
+.sp-section-body { margin-top: var(--sp-5); }
+/* Anything passed as a section's `right` slot goes to the right-hand end. */
+.sp-section-head > .btn, .sp-section-head > .sp-badge { margin-left: auto; }
+.sp-badge {
+  max-width: 46ch; overflow: hidden; text-overflow: ellipsis;
+  font-family: var(--font-mono); font-size: var(--t-2xs);
+  border: 1px solid var(--line-strong); border-radius: var(--r-full);
+  padding: var(--sp-1) var(--sp-4); color: var(--ink-2); white-space: nowrap;
+}
+.sp-badge.ok { border-color: var(--c-green); color: var(--c-green-ink); }
+.sp-badge.warn { border-color: var(--c-amber); color: var(--c-amber-ink); }
+
+/* One control per row: label + explanation on the left, the control on the
+   right, on a hairline. `wide` stacks them when the control is a segmented set
+   that would otherwise squeeze the sentence. */
+.sp-row {
+  display: flex; align-items: center; gap: var(--sp-6);
+  padding: var(--sp-4) 0; border-top: 1px solid var(--line);
+}
+.sp-row:first-child { border-top: none; }
+.sp-row.off { opacity: .45; }
+.sp-row-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--sp-1); }
+.sp-row-label { font-size: var(--t-sm); font-weight: var(--fw-medium); color: var(--ink); }
+.sp-row-hint { font-size: var(--t-xs); color: var(--ink-3); line-height: var(--lh-ui); max-width: var(--layout-measure); }
+.sp-row-ctl { flex-shrink: 0; display: flex; align-items: center; gap: var(--sp-4); }
+.sp-row.wide { flex-wrap: wrap; }
+.sp-row.wide .sp-row-ctl { flex-basis: 100%; }
+
+.sp-seg { display: inline-flex; gap: var(--sp-2); flex-wrap: wrap; }
+.sp-inline { display: inline-flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; }
+
+.sp-slider { display: inline-flex; align-items: center; gap: var(--sp-4); }
+.sp-slider input[type='range'] { width: 190px; accent-color: var(--c-blue); height: 18px; }
+.sp-slider.tight input[type='range'] { width: 120px; }
+.sp-num {
+  font-family: var(--font-mono); font-size: var(--t-2xs); color: var(--ink-2);
+  font-variant-numeric: tabular-nums; min-width: 62px; text-align: right; white-space: nowrap;
+}
+.sp-date {
+  font: inherit; font-family: var(--font-mono); font-size: var(--t-xs);
+  background: var(--sunken); color: var(--ink);
+  border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+  padding: var(--sp-2) var(--sp-3);
+}
+
+/* A nested group inside a section — the seven triggers, the six moods, the
+   paths list. Recessed so it reads as detail under the setting above it. */
+.sp-sub {
+  margin-top: var(--sp-6); padding: var(--sp-5) var(--sp-5) var(--sp-4);
+  background: var(--sunken); border: 1px solid var(--line); border-radius: var(--r-md);
+}
+.sp-sub-head { display: flex; flex-direction: column; gap: var(--sp-2); margin-bottom: var(--sp-3); }
+.sp-sub-note { font-size: var(--t-xs); color: var(--ink-3); line-height: var(--lh-prose); max-width: var(--layout-measure); }
+.sp-sub .sp-row { border-top-color: var(--line); }
+
+.sp-prosody-head,
+.sp-prosody {
+  display: grid; grid-template-columns: 84px 1fr 1fr auto;
+  align-items: center; gap: var(--sp-4);
+}
+.sp-prosody { padding: var(--sp-3) 0; border-top: 1px solid var(--line); }
+.sp-col-label { font-size: var(--t-3xs); font-weight: var(--fw-semi); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+/* The mood chip is the one place colour appears in this pane, and it means the
+   same thing it means everywhere else in the app. */
+.sp-mood {
+  font-size: var(--t-2xs); font-weight: var(--fw-semi); text-transform: uppercase; letter-spacing: .06em;
+  border-radius: var(--r-xs); padding: var(--sp-1) var(--sp-3); text-align: center;
+}
+.sp-prosody .sp-num { min-width: 40px; }
+/* Shown only when the prosody table collapses and its column headings go. */
+.sp-tag { display: none; font-size: var(--t-3xs); color: var(--ink-3); min-width: 42px; }
+
+.sp-mode {
+  display: flex; align-items: flex-start; gap: var(--sp-5);
+  padding: var(--sp-4) 0; border-top: 1px solid var(--line);
+}
+.sp-mode:first-child { border-top: none; }
+/* The mode buttons carry the same hue they carry in the header selector — the
+   dot is the identity, and it has to mean the same thing in both places. */
+.sp-mode > .btn {
+  min-width: 116px; display: inline-flex; align-items: center; gap: var(--sp-3);
+  justify-content: flex-start;
+}
+.sp-mode > .btn::before {
+  content: ''; width: 7px; height: 7px; border-radius: var(--r-full);
+  background: var(--mode-drill); flex-shrink: 0;
+}
+.sp-mode > .btn.m-exam::before { background: var(--mode-exam); }
+.sp-mode > .btn.m-postmortem::before { background: var(--mode-postmortem); }
+.sp-mode > .btn.m-teach::before { background: var(--mode-teach); }
+.sp-mode > .btn.m-pause::before { background: var(--mode-pause); }
+.sp-mode > .btn.m-exam:not(.on) { border-color: var(--c-red); color: var(--c-red-ink); }
+.sp-mode > .btn.m-pause:not(.on) { border-color: var(--c-amber); color: var(--c-amber-ink); }
+/* The active mode is the filled one, and its dot has to stay visible on ink. */
+.sp-mode > .btn.on::before { background: var(--bg); }
+.sp-mode-text { display: flex; flex-direction: column; gap: var(--sp-3); min-width: 0; }
+.sp-mode-hint { font-size: var(--t-xs); color: var(--ink-2); line-height: var(--lh-ui); }
+.sp-gates { display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-5); }
+.sp-gate { font-size: var(--t-2xs); font-family: var(--font-mono); color: var(--ink-3); white-space: nowrap; }
+.sp-gate.yes { color: var(--c-green-ink); }
+.sp-gate.no { color: var(--c-red-ink); }
+
+.sp-actions { display: flex; align-items: center; gap: var(--sp-4); flex-wrap: wrap; margin-top: var(--sp-5); }
+.sp-actions-note { font-size: var(--t-2xs); color: var(--ink-3); }
+
+.sp-paths { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: var(--sp-2) var(--sp-5); }
+.sp-paths dt { font-size: var(--t-2xs); color: var(--ink-3); white-space: nowrap; }
+/* Paths WRAP rather than truncate. The first attempt used `direction: rtl` to
+   ellipsise the left-hand side, which moves the leading slash to the end and
+   prints a path that does not exist. A path shown here is a path you might
+   paste into a terminal; it has to be exactly right or not shown at all. */
+.sp-paths dd {
+  font-family: var(--font-mono); font-size: var(--t-2xs); color: var(--ink-2);
+  min-width: 0; overflow-wrap: anywhere; line-height: var(--lh-ui);
+}
+.sp-empty { font-size: var(--t-xs); color: var(--ink-3); padding: var(--sp-5) 0; }
+.sp-foot, .sp-tail {
+  margin-top: var(--sp-5); font-size: var(--t-xs); color: var(--ink-3);
+  line-height: var(--lh-prose); max-width: var(--layout-measure);
+}
+.sp-tail { padding: var(--sp-6); border-top: 1px solid var(--line); margin-top: 0; }
+
+/* The toggle in the pane is the same switch as the popover's, but it is a real
+   <button>, so it has to shed the button chrome. */
+button.sw { padding: 0; cursor: pointer; }
+button.sw:disabled { cursor: default; opacity: .5; }
+
+/* Narrow pane: the control drops under its own label rather than crushing it.
+   A CONTAINER query, not a media query. The pane lives in a resizable column, so
+   its width has nothing to do with the viewport's — a @media rule here never
+   fired at all, and a 224px column rendered one word per line with the slider
+   sitting on top of the text. The pane measures itself. */
+.sp-tab { container-type: inline-size; container-name: settings; }
+
+@container settings (max-width: 720px) {
+  .sp-row { flex-direction: column; align-items: stretch; gap: var(--sp-3); }
+  .sp-row-ctl { justify-content: flex-start; flex-wrap: wrap; }
+  .sp-slider { width: 100%; }
+  .sp-slider input[type='range'] { flex: 1; width: auto; min-width: 90px; }
+  .sp-num { min-width: 0; }
+  .sp-section { padding: var(--sp-6) var(--sp-5) var(--sp-7); }
+  .sp-mode { flex-direction: column; gap: var(--sp-3); }
+}
+
+@container settings (max-width: 520px) {
+  /* The prosody table stops being a table: each mood becomes its own stack. */
+  .sp-prosody-head { display: none; }
+  .sp-prosody { grid-template-columns: minmax(0, 1fr) auto; gap: var(--sp-2) var(--sp-4); }
+  .sp-prosody .sp-mood { grid-column: 1 / -1; justify-self: start; }
+  .sp-prosody .sp-slider { grid-column: 1; }
+  .sp-tag { display: inline; }
+  .sp-prosody > .btn { grid-column: 2; grid-row: 2 / span 2; align-self: center; }
+  .sp-paths { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .sp-paths dt { margin-top: var(--sp-3); }
+  .sp-jump { gap: var(--sp-3); }
+}
+
+/* Fallback for an engine with no container queries: the same collapse, keyed on
+   the viewport. It is worse — a wide window with a narrow pane still crushes —
+   but it is never wrong in the other direction. */
+@supports not (container-type: inline-size) {
+  @media (max-width: 720px) {
+    .sp-row { flex-direction: column; align-items: stretch; gap: var(--sp-3); }
+    .sp-slider input[type='range'] { width: 100%; }
+    .sp-prosody-head { display: none; }
+  }
+}
+
+/* daily active-time readout in the header, quiet next to the wordmark */
+.daily-time { font-size: var(--t-xs); color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; padding: var(--sp-1) var(--sp-3); border-radius: var(--r-sm); background: var(--sunken); }
+.daily-time.paused { opacity: .5; }
+
+/* pen colour swatches — appear only when pen or arrow is active */
+.pen-swatches { display: inline-flex; gap: var(--sp-2); align-items: center; margin: 0 var(--sp-1); }
+.pen-swatch { width: 16px; height: 16px; border-radius: 50%; padding: 0; border: 2px solid transparent; cursor: pointer; }
+.pen-swatch.on { border-color: var(--ink); box-shadow: 0 0 0 1px var(--surface); }
+
+/* macOS native shell: transparent full-size title bar means the traffic lights
+   overlay the top-left. Inset the header so the wordmark clears them, and give the
+   bar a little more height so the lights sit centred in clear space. */
+.native-app header {
+  padding-left: 84px;
+  padding-top: calc(var(--sp-4) + 4px);
+  -webkit-app-region: drag;
+}
+.native-app header button,
+.native-app header select,
+.native-app header .logo { -webkit-app-region: no-drag; }
+
+
+
+
+/* ── JZ paper flow panel ─────────────────────────────────────────────────────── */
+.pf { display: flex; flex-direction: column; height: 100%; gap: var(--sp-4); padding: var(--sp-5); overflow-y: auto; }
+.pf-top, .pf-clock-row, .pf-row, .pf-foot { display: flex; align-items: center; gap: var(--sp-4); }
+.pf-title { font-size: var(--t-lg); font-weight: var(--fw-bold); }
+.pf-clock { font-size: 22px; font-weight: var(--fw-bold); font-variant-numeric: tabular-nums; color: var(--c-violet); }
+.pf-clock.low { color: var(--c-amber-ink); }
+.pf-clock.up { color: var(--c-red-ink); }
+.pf-sub { font-family: var(--font-mono); font-size: var(--t-2xs); color: var(--ink-3); }
+.pf-dots { display: grid; grid-template-columns: repeat(10, 1fr); gap: var(--sp-2); }
+.pf-dot { font-size: var(--t-2xs); padding: var(--sp-2) 0; border-radius: var(--r-sm); border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink-2); cursor: pointer; font-variant-numeric: tabular-nums; }
+.pf-dot.on { outline: 2px solid var(--c-violet); outline-offset: 1px; }
+.pf-dot.m-y { background: var(--c-green-soft); color: var(--c-green-ink); border-color: var(--c-green); }
+.pf-dot.m-m { background: var(--c-amber-soft); color: var(--c-amber-ink); border-color: var(--c-amber); }
+.pf-dot.m-n { background: var(--c-red-soft); color: var(--c-red-ink); border-color: var(--c-red); }
+.pf-card { display: flex; flex-direction: column; gap: var(--sp-4); padding: var(--sp-5);
+  border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
+.pf-q { font-size: var(--t-xl); font-weight: var(--fw-bold); }
+.pf-note { font-size: var(--t-sm); color: var(--ink-2); }
+.pf-reveal { align-self: flex-start; }
+.pf-marks { display: flex; gap: var(--sp-3); }
+.pf-mark { flex: 1; padding: var(--sp-4); font-size: var(--t-sm); }
+.pf-mark.m-y.on { background: var(--c-green-soft); color: var(--c-green-ink); border-color: var(--c-green); }
+.pf-mark.m-m.on { background: var(--c-amber-soft); color: var(--c-amber-ink); border-color: var(--c-amber); }
+.pf-mark.m-n.on { background: var(--c-red-soft); color: var(--c-red-ink); border-color: var(--c-red); }
+.pf-buckets { display: flex; gap: var(--sp-2); }
+.pf-buckets .btn.on { background: var(--c-violet-soft); color: var(--c-violet-ink); }
+.pf-comment { min-height: 110px; resize: vertical; padding: var(--sp-3); font: inherit; font-size: var(--t-sm);
+  border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--bg); color: var(--ink); }
+.pf-foot { font-size: var(--t-xs); color: var(--ink-3); }
+.pf .m-y { color: var(--c-green-ink); }
+.pf .m-m { color: var(--c-amber-ink); }
+.pf .m-n { color: var(--c-red-ink); }
+.pf-score { font-size: var(--t-lg); }
+.pf-picker { display: flex; flex-direction: column; gap: var(--sp-4); padding: var(--sp-5); }
+.pf-pick-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); }
+.pf-pick { display: flex; flex-direction: column; align-items: flex-start; gap: var(--sp-2); padding: var(--sp-4);
+  border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); color: var(--ink); cursor: pointer; text-align: left; }
+.pf-pick span { font-size: var(--t-2xs); color: var(--ink-3); }
+.pf-pick.active { border-color: var(--c-violet); }
+.pf-pick.finished { border-color: var(--c-green); }
+.pf-empty { padding: var(--sp-6); color: var(--ink-3); }
+.pf kbd { font-family: var(--font-mono); font-size: var(--t-2xs); opacity: .6; margin-left: var(--sp-2); }
+.pf-resume { display: flex; align-items: center; gap: var(--sp-4); padding: var(--sp-4) var(--sp-5);
+  border: 2px solid var(--c-violet); border-radius: var(--r-md); background: var(--c-violet-soft); color: var(--c-violet-ink);
+  font-size: var(--t-sm); }
+.pf-resume > div { flex: 1; }
+
+/* ═══════ 8.5+ ═══════ */
+.btn.t85-btn { border-color: var(--c-violet); color: var(--c-violet-ink); font-weight: var(--fw-semi); }
+.t85-tab { display: flex; flex-direction: column; min-height: 0; height: 100%; }
+.t85-empty { padding: var(--sp-6); color: var(--ink-3); }
+.t85-body { overflow: auto; padding: var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-5); }
+.t85-heroes { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--sp-4); }
+.t85-hero {
+  border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface);
+  padding: var(--sp-4) var(--sp-5); box-shadow: var(--shadow-1);
+}
+.t85-hero.goal { border-color: var(--c-violet); }
+.t85-num { font-size: var(--t-2xl); font-weight: var(--fw-semi); line-height: 1; font-variant-numeric: tabular-nums; color: var(--ink); }
+.t85-num span { font-size: var(--t-sm); color: var(--ink-3); font-weight: var(--fw-normal); }
+.t85-lab { margin-top: var(--sp-2); font-size: var(--t-2xs); color: var(--ink-3); letter-spacing: .04em; }
+.t85-card { border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); padding: var(--sp-4) var(--sp-5); }
+.t85-card h3 { margin: 0 0 var(--sp-3); font-size: var(--t-xs); font-weight: var(--fw-semi); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.t85-cardhead { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); }
+.t85-where { margin: 0; padding-left: var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-3); font-size: var(--t-sm); line-height: var(--lh-prose); color: var(--ink); }
+.t85-chart { position: relative; }
+.t85-chart svg { width: 100%; max-width: 560px; height: auto; display: block; }
+.t85-grid { stroke: var(--line); stroke-width: 1; }
+.t85-axis { fill: var(--ink-3); font-size: 10px; font-family: var(--font-mono); }
+.t85-val { fill: var(--ink); font-size: 11px; font-weight: 600; font-family: var(--font-mono); }
+.t85-bar { fill: var(--c-violet); opacity: .85; transition: opacity var(--motion-fast); }
+.t85-bar.on { opacity: 1; }
+.t85-target { stroke: var(--c-green); stroke-width: 2; stroke-dasharray: 5 4; }
+.t85-target-label { fill: var(--c-green-ink); font-size: 10px; font-weight: 600; font-family: var(--font-mono); }
+.t85-tip {
+  position: absolute; top: 0; transform: translateX(-50%); pointer-events: none;
+  background: var(--raised); border: 1px solid var(--line-strong); border-radius: var(--r-sm);
+  padding: var(--sp-2) var(--sp-3); font-size: var(--t-2xs); color: var(--ink); box-shadow: var(--shadow-2); white-space: nowrap;
+}
+.t85-tip div { color: var(--ink-2); }
+.t85-table { width: 100%; border-collapse: collapse; font-size: var(--t-xs); margin-top: var(--sp-3); }
+.t85-table th { text-align: left; color: var(--ink-3); font-weight: var(--fw-medium); border-bottom: 1px solid var(--line); padding: var(--sp-2) var(--sp-3); }
+.t85-table td { border-bottom: 1px solid var(--line); padding: var(--sp-2) var(--sp-3); color: var(--ink); font-variant-numeric: tabular-nums; }
+.t85-table tr.sum td { font-weight: var(--fw-semi); }
+.t85-table tr.due td:first-child { color: var(--c-red-ink); }
+.t85-leaks { display: flex; flex-direction: column; gap: var(--sp-2); }
+.t85-leak { display: grid; grid-template-columns: minmax(120px, 190px) 1fr auto; align-items: center; gap: var(--sp-3); font-size: var(--t-xs); }
+.t85-leak-name { color: var(--ink-2); }
+.t85-leak-track { height: 10px; background: var(--sunken); border-radius: var(--r-xs); overflow: hidden; }
+.t85-leak-fill { display: block; height: 100%; background: var(--c-slate); border-radius: 0 var(--r-xs) var(--r-xs) 0; }
+.t85-leak-fill.hot { background: var(--c-violet); }
+.t85-leak-n { font-family: var(--font-mono); color: var(--ink-2); font-size: var(--t-2xs); }
+.t85-day { padding: var(--sp-3) 0; border-top: 1px solid var(--line); }
+.t85-day:first-of-type { border-top: 0; }
+.t85-day.past { opacity: .6; }
+.t85-day.today .t85-dayname { color: var(--c-violet-ink); }
+.t85-dayname { font-size: var(--t-2xs); font-weight: var(--fw-semi); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: var(--sp-2); }
+.t85-task { display: flex; align-items: flex-start; gap: var(--sp-3); padding: var(--sp-2) 0; font-size: var(--t-sm); color: var(--ink); }
+.t85-task input { margin-top: 3px; }
+.t85-task-text { flex: 1; min-width: 0; }
+.t85-task.done .t85-task-text > div:first-child { text-decoration: line-through; color: var(--ink-3); }
+.t85-why { font-size: var(--t-xs); color: var(--ink-3); margin-top: var(--sp-1); }
+.t85-x { border: 0; background: none; color: var(--ink-3); cursor: pointer; font-size: var(--t-md); line-height: 1; }
+.t85-x:hover { color: var(--c-red-ink); }
+.t85-add { display: flex; gap: var(--sp-3); margin-top: var(--sp-3); }
+.t85-add input { flex: 1; border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--bg); color: var(--ink); padding: var(--sp-2) var(--sp-3); font-size: var(--t-sm); }

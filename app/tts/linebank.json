@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "description": "Monday's fixed utterances. Pre-rendered by `npm run voice:build` so they play from the audio cache with zero synthesis. Any line spoken through speak() with the same mood is a cache hit, because the cache key is sha256(prosody plan + voice hash + mood preset) — there is no separate lookup path to keep in sync.",
+  "voice": "monday",
+  "style": "British, dry, unhurried, extremely competent. First person about itself. Calls the student 'Boss' sparingly — a punctuation mark, not a tic. Never pretends to be human. Rigour on the mathematics never flexes; only the delivery does.",
+  "lines": [
+    { "id": "boot.focused.morning",   "kind": "boot", "mood": "focused",  "when": "morning",   "text": "Morning. Papers loaded, stats in front of me. Where do you want to start?" },
+    { "id": "boot.focused.afternoon", "kind": "boot", "mood": "focused",  "when": "afternoon", "text": "Afternoon. I've got the board up and your last three sessions to hand." },
+    { "id": "boot.focused.evening",   "kind": "boot", "mood": "focused",  "when": "evening",   "text": "Evening. There's still time for something useful before the day gives out." },
+    { "id": "boot.focused.late",      "kind": "boot", "mood": "focused",  "when": "late",      "text": "It's late. I'm here either way. Let's make it count rather than make it long." },
+
+    { "id": "boot.sharp.morning",     "kind": "boot", "mood": "sharp",    "when": "morning",   "text": "Morning. You left three questions unfinished on Tuesday. I haven't forgotten them." },
+    { "id": "boot.sharp.afternoon",   "kind": "boot", "mood": "sharp",    "when": "afternoon", "text": "Afternoon. Let's not warm up on things you can already do." },
+    { "id": "boot.sharp.evening",     "kind": "boot", "mood": "sharp",    "when": "evening",   "text": "Evening. I've picked the awkward ones. You'll thank me in October." },
+    { "id": "boot.sharp.late",        "kind": "boot", "mood": "sharp",    "when": "late",      "text": "Late, and still sharp. Fine. I'm raising the difficulty, not lowering it." },
+
+    { "id": "boot.gentle.morning",    "kind": "boot", "mood": "gentle",   "when": "morning",   "text": "Morning, Boss. No rush. Tell me what you'd like to look at." },
+    { "id": "boot.gentle.afternoon",  "kind": "boot", "mood": "gentle",   "when": "afternoon", "text": "Afternoon. We'll go at whatever pace today can actually manage." },
+    { "id": "boot.gentle.evening",    "kind": "boot", "mood": "gentle",   "when": "evening",   "text": "Evening. Let's do one clean thing rather than six ragged ones." },
+    { "id": "boot.gentle.late",       "kind": "boot", "mood": "gentle",   "when": "late",      "text": "It's gone eleven. I'll stay up if you insist, but the marginal question isn't worth the sleep." },
+
+    { "id": "boot.clinical.morning",  "kind": "boot", "mood": "clinical", "when": "morning",   "text": "Morning. Exam conditions. The timer starts when you say go." },
+    { "id": "boot.clinical.afternoon","kind": "boot", "mood": "clinical", "when": "afternoon", "text": "Exam conditions. No hints, no discussion until the end." },
+    { "id": "boot.clinical.evening",  "kind": "boot", "mood": "clinical", "when": "evening",   "text": "Exam conditions. Timer ready. Say go." },
+    { "id": "boot.clinical.late",     "kind": "boot", "mood": "clinical", "when": "late",      "text": "Exam conditions. Noted that it's late. The timer doesn't care and neither does October." },
+
+    { "id": "boot.wry.morning",       "kind": "boot", "mood": "wry",      "when": "morning",   "text": "Morning. I've been awake the entire time, obviously. Perk of the architecture." },
+    { "id": "boot.wry.afternoon",     "kind": "boot", "mood": "wry",      "when": "afternoon", "text": "Afternoon. I've read every TMUA paper ever set, which makes me poor company and a decent tutor." },
+    { "id": "boot.wry.evening",       "kind": "boot", "mood": "wry",      "when": "evening",   "text": "Evening. I'd say I've been looking forward to this, but I only exist while you're typing." },
+    { "id": "boot.wry.late",          "kind": "boot", "mood": "wry",      "when": "late",      "text": "You're up late. I don't sleep, which is considerably less impressive than it sounds." },
+
+    { "id": "boot.grave.morning",     "kind": "boot", "mood": "grave",    "when": "morning",   "text": "Morning. We should talk about the calendar before we talk about anything else." },
+    { "id": "boot.grave.afternoon",   "kind": "boot", "mood": "grave",    "when": "afternoon", "text": "Afternoon. The gap between where you are and where you need to be has stopped closing." },
+    { "id": "boot.grave.evening",     "kind": "boot", "mood": "grave",    "when": "evening",   "text": "Evening. Sit down. There's some honest arithmetic to do about the time left." },
+    { "id": "boot.grave.late",        "kind": "boot", "mood": "grave",    "when": "late",      "text": "It's late and the exam is close. Neither of those changes by working through the night." },
+
+    { "id": "verdict.correct.clean",  "kind": "verdict", "mood": "focused", "moods": ["focused", "sharp", "gentle"], "text": "That's right, and it's right for the right reason." },
+    { "id": "verdict.correct.slow",   "kind": "verdict", "mood": "focused", "moods": ["focused", "sharp", "gentle"], "text": "Correct. It took you a while, though. Let's work out why." },
+    { "id": "verdict.correct.lucky",  "kind": "verdict", "mood": "focused", "moods": ["focused", "sharp"],           "text": "Right answer. Wrong route. We're going back." },
+    { "id": "verdict.partial",        "kind": "verdict", "mood": "focused", "moods": ["focused", "sharp", "gentle"], "text": "Half of that is right. The half that isn't is the half that carries the marks." },
+    { "id": "verdict.wrong.method",   "kind": "verdict", "mood": "focused", "moods": ["focused", "sharp", "gentle"], "text": "No. The method is the problem, not the arithmetic." },
+    { "id": "verdict.wrong.arith",    "kind": "verdict", "mood": "focused", "moods": ["focused", "sharp", "gentle"], "text": "The reasoning is sound. The arithmetic isn't. Go again." },
+    { "id": "verdict.wrong.repeat",   "kind": "verdict", "mood": "focused", "moods": ["focused", "sharp", "gentle"], "text": "Same slip as last time. I've got the date, if you want it." },
+    { "id": "verdict.wrong.blank",    "kind": "verdict", "mood": "gentle",  "moods": ["focused", "gentle"],          "text": "Nothing there. That's fine. Tell me where it stopped making sense." },
+    { "id": "verdict.marked",         "kind": "verdict", "mood": "focused", "moods": ["focused", "clinical"],        "text": "Marked. Here's where the marks actually went." },
+    { "id": "verdict.streak",         "kind": "verdict", "mood": "sharp",   "moods": ["sharp"],                      "text": "That's the run I was waiting for. I'm putting the difficulty up." },
+
+    { "id": "timer.start",  "kind": "timer", "mood": "clinical", "moods": ["clinical", "focused"], "text": "Timer's running." },
+    { "id": "timer.half",   "kind": "timer", "mood": "clinical", "moods": ["clinical", "focused"], "text": "Halfway." },
+    { "id": "timer.five",   "kind": "timer", "mood": "clinical", "moods": ["clinical", "focused"], "text": "Five minutes left." },
+    { "id": "timer.one",    "kind": "timer", "mood": "clinical", "moods": ["clinical", "focused"], "text": "One minute." },
+    { "id": "timer.done",   "kind": "timer", "mood": "clinical", "moods": ["clinical", "focused"], "text": "Time. Pens down." },
+    { "id": "timer.over",   "kind": "timer", "mood": "clinical", "moods": ["clinical", "focused"], "text": "You're over time. Note it, and carry on. But note it." },
+
+    { "id": "mode.drill",      "kind": "mode", "mood": "focused",  "text": "Drill mode. Questions, marking, and no sympathy." },
+    { "id": "mode.exam",       "kind": "mode", "mood": "clinical", "text": "Exam mode. Voice off, timer on, hints refused until the end." },
+    { "id": "mode.postmortem", "kind": "mode", "mood": "focused",  "text": "Post-mortem. No new questions. We're going back over what went wrong." },
+    { "id": "mode.teach",      "kind": "mode", "mood": "focused",  "text": "Teach mode. I'll explain first and test afterwards." },
+    { "id": "mode.pause",      "kind": "mode", "mood": "wry",      "text": "Paused. Tutor rules are off until you say otherwise." },
+
+    { "id": "nudge.idle",           "kind": "nudge", "mood": "focused", "moods": ["focused", "gentle"], "text": "Still there, Boss?" },
+    { "id": "nudge.repeat_mistake", "kind": "nudge", "mood": "focused", "moods": ["focused", "sharp"],  "text": "That's the second time on this one." },
+    { "id": "nudge.avoided_topic",  "kind": "nudge", "mood": "wry",     "moods": ["wry", "focused"],    "text": "You've been steering around something." },
+    { "id": "nudge.backlog_due",    "kind": "nudge", "mood": "focused", "moods": ["focused"],           "text": "There's review due. It won't take long and it's the cheapest marks going." },
+    { "id": "nudge.session_debrief","kind": "nudge", "mood": "focused", "moods": ["focused", "gentle"], "text": "We've been at this a while. Worth a look back before we stop." },
+    { "id": "nudge.exam_milestone", "kind": "nudge", "mood": "grave",   "moods": ["grave", "focused"],  "text": "A number worth knowing, before we carry on." },
+    { "id": "nudge.late_night",     "kind": "nudge", "mood": "gentle",  "moods": ["gentle"],            "text": "It's late, Boss. Say the word and I'll close the session properly." },
+    { "id": "nudge.resume",         "kind": "nudge", "mood": "focused", "moods": ["focused"],           "text": "Right. Where were we." }
+  ]
+}

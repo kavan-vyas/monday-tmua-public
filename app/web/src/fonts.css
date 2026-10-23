@@ -1,0 +1,12 @@
+/* Self-hosted IBM Plex — latin subset only, four weights each.
+   Self-hosted on purpose: the desktop .app must render identically with no
+   network. Fontsource ships the woff2 next to a CSS file per weight; importing
+   the specific latin faces keeps the bundle to what is actually used. */
+@import '@fontsource/ibm-plex-sans/latin-400.css';
+@import '@fontsource/ibm-plex-sans/latin-500.css';
+@import '@fontsource/ibm-plex-sans/latin-600.css';
+@import '@fontsource/ibm-plex-sans/latin-700.css';
+@import '@fontsource/ibm-plex-sans/latin-400-italic.css';
+@import '@fontsource/ibm-plex-mono/latin-400.css';
+@import '@fontsource/ibm-plex-mono/latin-500.css';
+@import '@fontsource/ibm-plex-mono/latin-600.css';

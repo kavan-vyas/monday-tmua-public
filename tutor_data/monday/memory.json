@@ -1,0 +1,9 @@
+{
+  "schema_version": "monday-1",
+  "created": null,
+  "note": "Monday's own record. NOT the student record \u2014 session_memory.json is his and must stay byte-compatible with the dashboard. This file is mine: what worked, what bounced, how we talk.",
+  "explanations": [],
+  "phrasings": [],
+  "observations": [],
+  "mood_history": []
+}

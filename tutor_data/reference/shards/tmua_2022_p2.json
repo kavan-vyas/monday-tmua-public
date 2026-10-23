@@ -1,0 +1,596 @@
+{
+ "unit": "tmua_2022_p2",
+ "generated": "2026-08-06",
+ "new_tags": [
+  {
+   "category": "trap_type",
+   "tag": "irreducibility_confused_with_primality",
+   "why": "conflates a polynomial's failure to factor into linear terms with the primality of the integers it outputs (TMUA2022P2Q07)"
+  }
+ ],
+ "questions": [
+  {
+   "id": "TMUA2022P2Q01",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "1",
+   "topic": [
+    "calculus",
+    "algebra"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "discriminant_condition"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q02",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "2",
+   "topic": [
+    "algebra",
+    "combinatorics"
+   ],
+   "technique": [
+    "binomial_expansion",
+    "substitution_of_test_values"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q03",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "3",
+   "topic": [
+    "number_theory",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "divisibility_argument"
+   ],
+   "question_type": "disprove_or_counterexample",
+   "cognitive_skill": [
+    "logical_precision",
+    "numerical_fluency",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "missed_case",
+    "misread_question"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q04",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "4",
+   "topic": [
+    "coordinate_geometry",
+    "algebra"
+   ],
+   "technique": [
+    "circle_equation_manipulation",
+    "vector_or_coordinate_argument"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q05",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "5",
+   "topic": [
+    "logic_and_proof",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "converse_or_contrapositive_analysis",
+    "case_split",
+    "counterexample_construction"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "algebraic_manipulation",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "converse_assumed_from_implication",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q06",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "6",
+   "topic": [
+    "logic_and_proof",
+    "number_theory"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "case_split"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "logical_precision",
+    "case_analysis",
+    "pattern_recognition"
+   ],
+   "trap_type": [
+    "necessary_confused_with_sufficient",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q07",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "7",
+   "topic": [
+    "algebra",
+    "number_theory",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "discriminant_condition",
+    "factor_or_remainder_theorem",
+    "counterexample_construction"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "irreducibility_confused_with_primality"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q08",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "8",
+   "topic": [
+    "number_theory",
+    "sequences_and_series",
+    "combinatorics"
+   ],
+   "technique": [
+    "pigeonhole",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "case_analysis",
+    "symbolic_bookkeeping",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "off_by_one_in_index_or_count",
+    "missed_case"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q09",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "9",
+   "topic": [
+    "algebra",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "quantifier_negation",
+    "bounding_or_extreme_value_argument",
+    "counterexample_construction"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "quantifier_order_confused",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q10",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "10",
+   "topic": [
+    "logic_and_proof",
+    "algebra"
+   ],
+   "technique": [
+    "quantifier_negation",
+    "bounding_or_extreme_value_argument"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "abstraction_from_specific_to_general",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "quantifier_order_confused"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q11",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "11",
+   "topic": [
+    "geometry",
+    "coordinate_geometry",
+    "trigonometry"
+   ],
+   "technique": [
+    "vector_or_coordinate_argument",
+    "pythagoras_or_trig_in_triangle"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled",
+    "symmetry_wrongly_assumed"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q12",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "12",
+   "topic": [
+    "calculus",
+    "integration",
+    "algebra"
+   ],
+   "technique": [
+    "inequality_manipulation",
+    "exponential_law_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "estimation_and_sanity_check",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "sign_error"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q13",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "13",
+   "topic": [
+    "algebra",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "case_split",
+    "inequality_manipulation"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "logical_precision",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "missed_case",
+    "division_by_zero_or_unsigned_variable"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q14",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "14",
+   "topic": [
+    "algebra"
+   ],
+   "technique": [
+    "absolute_value_case_analysis",
+    "inequality_manipulation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "numerical_fluency",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "sign_error",
+    "strict_vs_non_strict_inequality_confusion"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q15",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "15",
+   "topic": [
+    "logarithms",
+    "algebra"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "simultaneous_equations",
+    "change_of_base"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "symbolic_bookkeeping",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q16",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "16",
+   "topic": [
+    "sequences_and_series",
+    "logic_and_proof",
+    "algebra"
+   ],
+   "technique": [
+    "bounding_or_extreme_value_argument",
+    "counterexample_construction"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "abstraction_from_specific_to_general",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "symmetry_wrongly_assumed"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q17",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "17",
+   "topic": [
+    "calculus",
+    "algebra",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "converse_or_contrapositive_analysis"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "multi_step_chaining",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "converse_assumed_from_implication",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q18",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "18",
+   "topic": [
+    "trigonometry",
+    "functions",
+    "graph_sketching"
+   ],
+   "technique": [
+    "graph_transformation",
+    "substitution_of_test_values",
+    "bounding_or_extreme_value_argument"
+   ],
+   "question_type": "graph_interpretation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "pattern_recognition",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "symmetry_wrongly_assumed"
+   ],
+   "difficulty": 5,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q19",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "19",
+   "topic": [
+    "geometry",
+    "logic_and_proof",
+    "algebra"
+   ],
+   "technique": [
+    "case_split",
+    "counterexample_construction",
+    "trig_identity_application"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "abstraction_from_specific_to_general",
+    "case_analysis",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "over-restrictive_case_assumption",
+    "missed_case"
+   ],
+   "difficulty": 5,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2022P2Q20",
+   "paper": "TMUA_P2",
+   "year": 2022,
+   "part": "20",
+   "topic": [
+    "trigonometry",
+    "functions"
+   ],
+   "technique": [
+    "bounding_or_extreme_value_argument",
+    "trig_identity_application",
+    "substitution_of_test_values"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "multi_step_chaining",
+    "algebraic_manipulation",
+    "estimation_and_sanity_check"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 5,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "answer_key_only",
+   "cross_links": []
+  }
+ ]
+}

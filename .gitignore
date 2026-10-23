@@ -1,0 +1,30 @@
+node_modules/
+.DS_Store
+app/.voicecache/
+app/tts/voices/*.pt
+__pycache__/
+*.pyc
+.pytest_cache/
+app/web/dist/
+tutor_data/monday/proactive_state.json
+app/tts/__pycache__/
+.monday.iconset/
+app/tts/.venv/
+app/tts/__pycache__/
+
+# Local safety copies: session.js, ingest.js and examdate.js all snapshot before writing,
+# and the merge scripts do the same. They are recovery material for this machine, not
+# history.
+tutor_data/.backups/
+*.bak-*
+
+# LaTeX build by-products (sources and final PDFs are tracked)
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Per-install state
+app/.state.json
+app/chats/

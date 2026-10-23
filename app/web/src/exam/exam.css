@@ -1,0 +1,15 @@
+/* The /exam route's only house-side CSS. Everything visible on the exam screen comes
+   from the test driver's own stylesheets, loaded at runtime from /pv/ (pv/assets.js).
+   This file only makes the page a full-window, non-scrolling surface like the driver's
+   body (#abe-examPreview: overflow hidden) and styles the two things the driver lacks:
+   the save-failure banner and the prestart page's small Continue button. */
+html, body, #root { height: 100%; margin: 0; }
+body { overflow: hidden; background: #fff; font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 16px; }
+.pv-root { position: fixed; inset: 0; overflow: hidden; }
+#abe-examPreview-root { position: absolute; inset: 0; }
+.pv-error { position: fixed; left: 50%; top: 84px; transform: translateX(-50%); z-index: 2147483600;
+  background: #ff6666; color: #fff; font: 14px Tahoma, Arial, sans-serif; padding: 6px 12px; }
+.pv-setup-btn { font: 12pt arial !important; padding: 2px 10px !important; color: #000 !important; background: #e9e9ed !important; border: 1px solid #767676 !important; border-radius: 3px; cursor: pointer; }
+/* The driver's own loading page before the chrome exists. */
+#abe-delivery-loading-overlay { position: absolute; inset: 0; margin: auto; height: 100px; width: 95%; text-align: center; }
+#abe-delivery-loading-overlay > h1 { font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 1.75em; }

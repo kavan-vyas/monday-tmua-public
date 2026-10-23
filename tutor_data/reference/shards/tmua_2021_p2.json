@@ -1,0 +1,589 @@
+{
+ "unit": "tmua_2021_p2",
+ "generated": "2026-08-06",
+ "new_tags": [
+  {
+   "category": "technique",
+   "tag": "intermediate_value_argument",
+   "why": "reasoning that a continuous function (typically a polynomial) taking values of opposite sign must cross zero somewhere; distinct from bounding/extreme-value and stationary-point techniques already in vocab"
+  }
+ ],
+ "questions": [
+  {
+   "id": "TMUA2021P2Q01",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "1",
+   "topic": [
+    "calculus",
+    "integration"
+   ],
+   "technique": [
+    "definite_integral_evaluation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "sign_error",
+    "boundary_term_dropped"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q02",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "2",
+   "topic": [
+    "coordinate_geometry",
+    "geometry"
+   ],
+   "technique": [
+    "vector_or_coordinate_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "misread_question",
+    "sign_error"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q03",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "3",
+   "topic": [
+    "probability",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "divisibility_argument",
+    "counterexample_construction"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "logical_precision",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "necessary_confused_with_sufficient"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q04",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "4",
+   "topic": [
+    "number_theory",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "counterexample_construction",
+    "divisibility_argument"
+   ],
+   "question_type": "disprove_or_counterexample",
+   "cognitive_skill": [
+    "case_analysis",
+    "numerical_fluency"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q05",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "5",
+   "topic": [
+    "trigonometry",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "case_split"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "sign_error",
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q06",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "6",
+   "topic": [
+    "calculus",
+    "functions",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "counterexample_construction"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "abstraction_from_specific_to_general",
+    "spatial_visualisation"
+   ],
+   "trap_type": [
+    "necessary_confused_with_sufficient",
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q07",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "7",
+   "topic": [
+    "geometry",
+    "coordinate_geometry"
+   ],
+   "technique": [
+    "vector_or_coordinate_argument",
+    "symmetry_argument"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q08",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "8",
+   "topic": [
+    "calculus",
+    "functions",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "stationary_point_analysis",
+    "counterexample_construction"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "logical_precision",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "necessary_confused_with_sufficient"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q09",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "9",
+   "topic": [
+    "algebra",
+    "calculus",
+    "functions",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "polynomial_root_relations",
+    "intermediate_value_argument",
+    "counterexample_construction"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "logical_precision",
+    "case_analysis",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "missed_case"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q10",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "10",
+   "topic": [
+    "number_theory",
+    "sequences_and_series"
+   ],
+   "technique": [
+    "divisibility_argument",
+    "counterexample_construction",
+    "substitution_of_test_values"
+   ],
+   "question_type": "disprove_or_counterexample",
+   "cognitive_skill": [
+    "numerical_fluency",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "missed_case",
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 2,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q11",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "11",
+   "topic": [
+    "algebra",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "converse_or_contrapositive_analysis",
+    "inequality_manipulation"
+   ],
+   "question_type": "proof",
+   "cognitive_skill": [
+    "logical_precision",
+    "multi_step_chaining"
+   ],
+   "trap_type": [
+    "converse_assumed_from_implication",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q12",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "12",
+   "topic": [
+    "calculus",
+    "integration",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "area_between_curves",
+    "counterexample_construction"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "logical_precision",
+    "case_analysis"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q13",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "13",
+   "topic": [
+    "algebra",
+    "coordinate_geometry",
+    "logic_and_proof"
+   ],
+   "technique": [
+    "inequality_manipulation",
+    "counterexample_construction"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "case_analysis",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "endpoint_or_edge_case_ignored"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q14",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "14",
+   "topic": [
+    "algebra",
+    "logarithms"
+   ],
+   "technique": [
+    "substitution",
+    "simultaneous_equations"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "division_by_zero_or_unsigned_variable",
+    "domain_or_range_restriction_missed"
+   ],
+   "difficulty": 3,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q15",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "15",
+   "topic": [
+    "geometry",
+    "coordinate_geometry",
+    "algebra"
+   ],
+   "technique": [
+    "circle_equation_manipulation",
+    "completing_the_square",
+    "discriminant_condition"
+   ],
+   "question_type": "sufficiency_or_necessity",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "spatial_visualisation",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "sign_error"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q16",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "16",
+   "topic": [
+    "algebra",
+    "functions",
+    "graph_sketching"
+   ],
+   "technique": [
+    "sketching_to_count_intersections",
+    "absolute_value_case_analysis",
+    "case_split"
+   ],
+   "question_type": "mcq_eliminate_options",
+   "cognitive_skill": [
+    "spatial_visualisation",
+    "case_analysis",
+    "abstraction_from_specific_to_general"
+   ],
+   "trap_type": [
+    "missed_case",
+    "plausible_distractor_from_partial_work"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q17",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "17",
+   "topic": [
+    "logarithms",
+    "algebra",
+    "functions"
+   ],
+   "technique": [
+    "log_law_manipulation",
+    "substitution"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "abstraction_from_specific_to_general",
+    "symbolic_bookkeeping"
+   ],
+   "trap_type": [
+    "plausible_distractor_from_partial_work",
+    "wrong_formula_recalled"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q18",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "18",
+   "topic": [
+    "trigonometry",
+    "geometry"
+   ],
+   "technique": [
+    "case_split",
+    "pythagoras_or_trig_in_triangle"
+   ],
+   "question_type": "logical_deduction",
+   "cognitive_skill": [
+    "case_analysis",
+    "spatial_visualisation",
+    "logical_precision"
+   ],
+   "trap_type": [
+    "missed_case",
+    "over-restrictive_case_assumption"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q19",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "19",
+   "topic": [
+    "trigonometry"
+   ],
+   "technique": [
+    "trig_identity_application",
+    "absolute_value_case_analysis",
+    "case_split"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "algebraic_manipulation",
+    "case_analysis",
+    "careful_reading_of_constraints"
+   ],
+   "trap_type": [
+    "assumed_integer_or_positive_without_warrant",
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  },
+  {
+   "id": "TMUA2021P2Q20",
+   "paper": "TMUA_P2",
+   "year": 2021,
+   "part": "20",
+   "topic": [
+    "calculus",
+    "integration",
+    "sequences_and_series"
+   ],
+   "technique": [
+    "recurrence_unrolling",
+    "parity_argument",
+    "absolute_value_case_analysis",
+    "definite_integral_evaluation"
+   ],
+   "question_type": "mcq_direct_calculation",
+   "cognitive_skill": [
+    "pattern_recognition",
+    "case_analysis",
+    "algebraic_manipulation"
+   ],
+   "trap_type": [
+    "missed_case",
+    "off_by_one_in_index_or_count"
+   ],
+   "difficulty": 4,
+   "paper_section": "P2_logic_and_proof",
+   "exam_family": "TMUA_P2",
+   "verification_status": "mark_scheme_read",
+   "cross_links": []
+  }
+ ]
+}
